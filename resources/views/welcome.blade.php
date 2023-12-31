@@ -11,12 +11,14 @@
     <!-- Include Alpine.js from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
 </head>
-<body>
+<body class="bg-white">
     @include('components.nav-bar')
 
     <h1 class="text-3xl font-bold underline bg-slate-500">
         Hello world!
+        <br>
     </h1>
+@include('components.footer')
 
     <!-- Your other content goes here -->
 
