@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 Route::get('/contact', [UserController::class, 'contact'])->name('user.contact');
 Route::get('/about', [UserController::class, 'about'])->name('user.about');
+Route::get('/login',[AuthController::class,'login_index'])->name('login_index');
+Route::get('/register',[AuthController::class,'register_index'])->name('register_index');
