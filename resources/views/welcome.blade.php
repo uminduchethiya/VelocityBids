@@ -1,13 +1,32 @@
-<!doctype html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  @vite('resources/css/app.css')
+    <meta charset="UTF-8">
+    <title>Your Page Title</title>
+    <!-- Include your styles from Vite -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @vite('resources/css/app.css')
+
+    <!-- Include Alpine.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="bg-white">
+    @include('components.nav-bar')
+
+    <h1 class="text-3xl font-bold underline bg-slate-500">
+        Hello world!
+        <br>
+    </h1>
+@include('components.footer')
+
+    <!-- Your other content goes here -->
+
+    <script>
+        // Initialize Alpine.js
+        document.addEventListener('DOMContentLoaded', function () {
+            Alpine.start();
+        });
+    </script>
 </body>
 </html>
