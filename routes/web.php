@@ -18,3 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/contact', [UserController::class, 'contact'])->name('user.contact');
+Route::get('/about', [UserController::class, 'about'])->name('user.about');
