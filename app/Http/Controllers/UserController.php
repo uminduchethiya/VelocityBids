@@ -10,4 +10,8 @@ class UserController extends Controller
     {
         return view('user.contact');
     }
+    public function about()
+    {
+        return view('user.about');
+    }
 }

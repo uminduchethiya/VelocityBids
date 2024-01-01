@@ -67,7 +67,7 @@
                     </li>
 
                     <li>
-                        <a href="#" class="text-black hover:text-orange-600">About</a>
+                        <a href="{{ route('user.about') }}" class="text-black hover:text-orange-600">About</a>
                     </li>
                     <li>
                         <a href="{{ route('user.contact') }}" class="text-black hover:text-orange-600">Contact</a>
