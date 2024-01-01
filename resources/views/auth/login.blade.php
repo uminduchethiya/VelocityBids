@@ -6,7 +6,7 @@
     @vite('resources/css/app.css')
 
 </head>
-
+{{-- loginpage --}}
 <body>
     <div class="py-48">
         <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-6xl max-h-full border">
