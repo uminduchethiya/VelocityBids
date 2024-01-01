@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Boogaloo&display=swap" rel="stylesheet">
 </head>
 
-
+{{-- registerpage --}}
 
 <body>
     <div class=" py-44">
