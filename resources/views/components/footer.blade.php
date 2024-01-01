@@ -1,4 +1,4 @@
-<div class="flex flex-wrap pt-4 text-white bg-black">
+<div class="flex flex-wrap px-8 pt-4 text-white bg-black">
     <div class="w-full px-1 mb-4 sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4">
         <img src="{{ asset('img/logo.png') }}" class="h-16" alt="Flowbite Logo" />
         <h4 class="text-xl font-semibold">Customer Support</h4>
@@ -26,7 +26,7 @@
             Pricing
         </p>
     </div>
-    <div class="w-full px-1 mb-4 sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4">
+    <div class="w-full px-1 pb-24 mb-4 sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4">
         <h4 class="text-xl font-semibold">Useful Information</h4>
         <p class="mt-2">
             My account<br>
