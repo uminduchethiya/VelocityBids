@@ -30,7 +30,7 @@
                 <!-- Common Text Section -->
                 <div class="w-full p-8 pl-10 md:w-1/2 md:text-left ">
                     <p class="mb-4 text-2xl font-bold">Contact Us</p>
-                    <p class="text-5xl font-bold">For Any Information</p>
+                    <p class="text-5xl font-bold">Vehicle Bidding Website</p>
 
                     <span class="text-yellow-500">★</span>
                     <span class="text-yellow-500">★</span>
