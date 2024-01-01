@@ -70,7 +70,7 @@
                         <a href="#" class="text-black hover:text-orange-600">About</a>
                     </li>
                     <li>
-                        <a href="#" class="text-black hover:text-orange-600">Contact</a>
+                        <a href="{{ route('user.contact') }}" class="text-black hover:text-orange-600">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -143,7 +143,7 @@
                 </a>
             </li>
             <li>
-                <a href="" class="flex flex-col items-center text-white">
+                <a href="{{ route('user.contact') }}" class="flex flex-col items-center text-white">
                     <img src="{{ asset('img/contact-icon.png') }}" alt="" class="w-6 h-6 mb-1">
                     Contact
                 </a>
