@@ -12,8 +12,8 @@
 {{-- registerpage --}}
 
 <body>
-    <div class=" py-44">
-        <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-6xl h-[800px] border">
+    <div class=" py-3 h-screen  ">
+        <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-6xl h-[810px] border">
             <div class=" w-full lg:w-1/2">
                 <h2 class="text-2xl font-semibold text-gray-600 text-center">VELOCITYBIDS</h2>
                 <p class="text-xl text-gray-600 text-center">Welcome backl!</p>
@@ -66,7 +66,7 @@
                 <div class="mt-4  mx-7">
                     <div class="flex justify-between">
                         <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                        <a href="#" class="text-xs text-gray-500">Forget Password?</a>
+
                     </div>
                     <input
                         class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
@@ -81,7 +81,7 @@
                 <div class=" flex flex-col-2"><label class="mt-4  mx-7">
                         <span class="block text-gray-700  text-sm font-bold mb-2">Gender</span>
                         <select
-                            class=" bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full ">
+                            class=" bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-[180px] ">
                             <option class=" @selected(true) text-black">Select</option>
                             <option>Male</option>
                             <option>Female</option>
@@ -91,11 +91,11 @@
                         <label class="block text-gray-700  text-sm font-bold mb-2">Phone Number</label>
                         <input
                             class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
-                            type="email" />
+                            type="phone number" />
                     </div>
                 </div>
                 <div> <label class="block text-gray-700  text-sm font-bold mb-2 mt-4  mx-7"> Date of Birth</label>
-                    <div class="relative max-w-sm  mx-7 ">
+                    <div class="relative   mx-7 ">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none ">
                           <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
@@ -111,10 +111,15 @@
                     <button
                         class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded-full hover:bg-gray-600">Register</button>
                 </div>
+                <div class="mt-4 flex items-center justify-between">
+                    <span class="border-b w-1/5 md:w-1/4"></span>
+                    <a href="login" class="text-xs text-gray-500 uppercase">login</a>
+                    <span class="border-b w-1/5 md:w-1/4"></span>
+                </div>
             </div>
 
-            <div class="hidden lg:block w-auto h-auto   bg-cover  mt-32 rounded-full">
-                <img src="{{ asset('img/registercar.jpeg') }}" class="h-[400px] md:h-[500px] w-full">
+            <div class="hidden lg:block w-auto h-auto    bg-cover  mt-44 rounded-full">
+                <img src="{{ asset('img/registercarbgremoved1.png') }}" class="h-[400px] md:h-[500px] rounded-br-[150px] w-full">
             </div>
 
         </div>
