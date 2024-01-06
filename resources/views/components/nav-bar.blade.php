@@ -4,10 +4,10 @@
     <div class="container font-boogaloo">
         <div class="flex items-center justify-between">
             <!-- Logo -->
-                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="{{ asset('img/logo.png') }}" class="h-16 " alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-transparent">VelocityBids</span>
-                </a>
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="{{ asset('img/logo.png') }}" class="h-16 " alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-transparent">VelocityBids</span>
+            </a>
             <!-- menu -->
             <!-- resources/views/your-view.blade.php -->
 
@@ -32,15 +32,15 @@
                         <ul x-show="open" @click.away="open = false"
                             class="absolute left-0 mt-2 space-y-2 text-black transition-opacity duration-300 ease-in-out bg-white"
                             role="menu">
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600">Car</a>
+                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Car</a>
                             </li>
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600">Van</a>
+                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Van</a>
                             </li>
                             <li role="menuitem"><a href="#"
                                     class="block px-4 py-2 hover:text-orange-600">Motorcycle</a></li>
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600">Bus</a>
+                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Bus</a>
                             </li>
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600">Boat</a>
+                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Boat</a>
                             </li>
                         </ul>
                     </li>
@@ -59,9 +59,9 @@
                         <ul x-show="open" @click.away="open = false"
                             class="absolute left-0 mt-2 space-y-2 text-black transition-opacity duration-300 ease-in-out bg-white"
                             role="menu">
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600">abcd</a>
+                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">abcd</a>
                             </li>
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600">Part</a>
+                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Part</a>
                             </li>
                         </ul>
                     </li>
@@ -75,38 +75,53 @@
                 </ul>
             </div>
 
-            <!-- nav-right -->
-            <div class="flex items-center h-20 gap-4">
-                <!-- search bar -->
-                <div class="hidden md:block">
-                    <input type="text" placeholder="Search"
-                        class="h-10 p-2 text-black border border-gray-800 rounded-full hover:border-orange-600" />
-                </div>
-                <div class="flex items-center">
-                    <a href="" class="pr-4 text-gray-800 border-r-2 border-primaryColor hover:text-orange-600">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                            </svg>
-                        </div>
-                    </a>
+        </div>
+    </div>
 
-                    <a href="" class="pl-4 text-gray-800 hover:text-orange-600">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                            </svg>
-                        </div>
-                    </a>
+    <!-- nav-right -->
+    <div class="flex items-center h-20 gap-4 px-5">
+        <div class="md:block">
+            <button type="button"
+                class="w-28 md:w-28 h-10 px-4 text-white bg-orange-500 hover:bg-orange-700 rounded-lg font-extrabold">
+                Bid now!
+            </button>
+        </div>
+        <div class="flex items-center">
+            <a href="" class="pr-4 text-gray-800 border-r-2 border-primaryColor hover:text-orange-600">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                    </svg>
+                </div>
+            </a>
+
+            <div class="relative  text-left flex ">
+                <a href="#" class="pl-4 text-gray-800 hover:text-orange-600" id="dropdown-menu">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Dropdown Content -->
+                <div class="hidden origin-top-right absolute right-0 mt-8 md:w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" id="dropdown-content">
+                    <div class="py-1 text-balance">
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Name</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Edit</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Bid</a>
+                    </div>
                 </div>
 
             </div>
         </div>
+
     </div>
+
 </header>
 
 <!-- Include Alpine.js -->
@@ -151,3 +166,19 @@
         </ul>
     </div>
 </header>
+
+<script>
+    document.getElementById('dropdown-menu').addEventListener('click', function () {
+        document.getElementById('dropdown-content').classList.toggle('hidden');
+    });
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function (event) {
+        const dropdown = document.getElementById('dropdown-content');
+        const menu = document.getElementById('dropdown-menu');
+
+        if (!menu.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
+</script>

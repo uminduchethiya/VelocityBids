@@ -83,21 +83,21 @@
     </div>
 
     <!-- Slider -->
-<div class="flex items-center justify-center mt-8 m-4">
-    <div class="w-full ">
-        <div class="slider">
-            <div class="carousel-slide">
-                <img src="{{ asset('img/slide1.jpg') }}" alt="Slide 1" class="w-full h-64 object-cover md:h-80">
-            </div>
-            <div class="carousel-slide">
-                <img src="{{ asset('img/slide2.jpg') }}" alt="Slide 2" class="w-full h-64 object-cover md:h-80">
-            </div>
-            <div class="carousel-slide">
-                <img src="{{ asset('img/slide3.jpg') }}" alt="Slide 3" class="w-full h-64 object-cover md:h-80">
+    <div class="flex items-center justify-center mt-8 m-4">
+        <div class="w-[98%] ">
+            <div class="slider">
+                <div class="carousel-slide">
+                    <img src="{{ asset('img/slide1.jpg') }}" alt="Slide 1" class="w-full h-64 object-cover md:h-80">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ asset('img/slide2.jpg') }}" alt="Slide 2" class="w-full h-64 object-cover md:h-80">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ asset('img/slide3.jpg') }}" alt="Slide 3" class="w-full h-64 object-cover md:h-80">
+                </div>
             </div>
         </div>
     </div>
-</div>
 <!-- End Slider -->
 
 @include('components.footer')
