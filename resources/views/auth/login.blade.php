@@ -8,10 +8,10 @@
 </head>
 {{-- loginpage --}}
 <body>
-    <div class="py-48">
-        <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-6xl max-h-full border">
+    <div class="py-48 h-screen ">
+        <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-6xl  border">
             <div class="hidden lg:block lg:w-1/2 bg-cover">
-            <img src="{{ asset('img/logincar.jpeg') }}" class=" md:h-[500px] w-auto h-auto">
+            <img src="{{ asset('img/logincarbgremoved.png') }}" class=" md:h-[500px] w-auto h-auto rounded-br-[90px]">
             </div>
             <div class="w-full p-8 lg:w-1/2">
                 <h2 class="text-2xl font-semibold text-gray-600 text-center">VELOCITYBIDS</h2>
