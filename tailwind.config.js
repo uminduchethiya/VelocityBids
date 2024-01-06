@@ -7,7 +7,13 @@ export default {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+        colors:{
+
+            "buttonorange":"#C5250F",
+
+          }
+    },
   },
   plugins: [require('flowbite/plugin')],
 }
