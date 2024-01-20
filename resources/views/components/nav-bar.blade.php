@@ -83,7 +83,7 @@
         <div class="md:block">
             <button type="button"
                 class="w-28 md:w-28 h-10 px-4 text-white bg-orange-500 hover:bg-orange-700 rounded-lg font-extrabold">
-                Bid now!
+                <a href="{{ route('bid.add-bid') }}">Bid now!</a>
             </button>
         </div>
         <div class="flex items-center">
