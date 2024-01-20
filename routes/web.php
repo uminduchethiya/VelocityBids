@@ -1,10 +1,11 @@
 <?php
 
 
-use App\Http\Controllers\HomeContrller;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\BidController;
+use App\Http\Controllers\HomeContrller;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -27,3 +28,5 @@ Route::get('/login',[AuthController::class,'login_index'])->name('login_index');
 Route::get('/register',[AuthController::class,'register_index'])->name('register_index');
 Route::get('/home',[HomeContrller::class,'index'])->name('index');
 
+// Bid Controller
+Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
