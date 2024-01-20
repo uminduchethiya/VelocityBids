@@ -100,7 +100,7 @@
                         <img id="preview5" class="image-preview mt-2 " alt="Preview">
                     </div>
                 </div>
-            </div>
+            </div> 
 
             <style>
                 .image-preview {
