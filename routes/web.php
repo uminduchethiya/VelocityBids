@@ -29,6 +29,16 @@ Route::get('/login',[AuthController::class,'login_index'])->name('login_index');
 Route::get('/register',[AuthController::class,'register_index'])->name('register_index');
 Route::get('/home',[HomeContrller::class,'index'])->name('index');
 
+
+Route::get('/forgetpassword', [AuthController::class, 'forgetpassword_index'])->name('forgetpassword');
+Route::post('/forgetpassword', [AuthController::class, 'forgetpasswordPost'])->name('forgetpasswordPost');
+
+Route::get('/resetpassword/{token}', [AuthController::class, 'resetpassword_index'])->name('resetpassword');
+Route::post('/resetpassword',[AuthController::class,'resetpasswordPost'])->name('resetpasswordPost');
+
+
+
+
 // Bid Controller
 Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
 
