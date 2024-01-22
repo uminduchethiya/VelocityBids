@@ -30,3 +30,6 @@ Route::get('/home',[HomeContrller::class,'index'])->name('index');
 
 // Bid Controller
 Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
+
+// register
+Route::POST('/register', [AuthController::class, 'user_register'])->name('register');
