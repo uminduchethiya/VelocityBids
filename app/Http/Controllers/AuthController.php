@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 
@@ -39,7 +40,7 @@ class AuthController extends Controller
                 'c_number.regex' => 'The phone number must have 10 digits and start with "0".',
             ]);
 
-           
+
 
             // Check if password and c_password match
             if ($request->input('password') !== $request->input('c_password')) {
@@ -76,5 +77,18 @@ class AuthController extends Controller
                 ->withErrors($e->errors())
                 ->withInput();
         }
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication passed
+            return redirect()->intended('/home');
+        }
+
+        // Authentication failed
+        return redirect()->back()->withErrors(['login' => 'Invalid email or password.']);
     }
 }
