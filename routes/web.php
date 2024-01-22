@@ -1,11 +1,13 @@
 <?php
 
 
-use App\Http\Controllers\HomeContrller;
+use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\BidController;
+use App\Http\Controllers\HomeContrller;
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Facade;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,22 @@ Route::get('/login',[AuthController::class,'login_index'])->name('login_index');
 Route::get('/register',[AuthController::class,'register_index'])->name('register_index');
 Route::get('/home',[HomeContrller::class,'index'])->name('index');
 
+// Bid Controller
+Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
+
+// register
+Route::POST('/register', [AuthController::class, 'user_register'])->name('register');
+
+
+// login
+
+Route::get('/login', [AuthController::class, 'login_index'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+
+
+// google URL
+
+Route::prefix('google')->name('google.')->group(function () {
+    Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login');
+    Route::any('callback', [GoogleController::class, 'callbackFormGoogle'])->name('callback');
+});
