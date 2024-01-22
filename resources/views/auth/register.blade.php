@@ -27,12 +27,12 @@
 
 
 <body>
-    <div class=" py-3 h-screen  ">
+    <div class=" py-3 h-auto  ">
         <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-6xl h-[810px] border">
             <div class=" w-full lg:w-1/2">
                 <h2 class="text-2xl font-semibold text-gray-600 text-center">VELOCITYBIDS</h2>
                 <p class="text-xl text-gray-600 text-center">Welcome backl!</p>
-                <a href="#"
+                {{-- <a href="#"
                     class="flex items-center justify-center mt-4 mx-7 text-white rounded-lg shadow-md hover:bg-gray-100   ">
                     <div class="px-5 py-3">
                         <svg class="h-6 w-6" viewBox="0 0 40 40">
@@ -51,13 +51,13 @@
                         </svg>
                     </div>
                     <h1 class="px-4 py-3 w-5/6 text-center text-gray-600 font-bold">Sign up with Google</h1>
-                </a>
+                </a> --}}
                 <div class=" mt-4  flex items-center justify-between">
                     <span class=" border-b w-1/5 mx-7 lg:w-1/4"></span>
                     <a href="#" class="text-xs text-center text-gray-500 uppercase">or Register with email</a>
                     <span class=" border-b w-1/5 mx-7 lg:w-1/4"></span>
                 </div>
-                <form action="{{ route('register') }}" method="POST">
+                <form action="{{ route('register') }}" method="POST" class="h-auto">
                     @csrf
 
                     <div class=" flex flex-col-2">

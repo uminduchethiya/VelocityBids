@@ -6,7 +6,7 @@ use App\Http\Controllers\BidController;
 use App\Http\Controllers\HomeContrller;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
-
+use Illuminate\Support\Facades\Facade;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +33,9 @@ Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid'
 
 // register
 Route::POST('/register', [AuthController::class, 'user_register'])->name('register');
+
+
+// login
+
+Route::get('/login', [AuthController::class, 'login_index'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.post');
