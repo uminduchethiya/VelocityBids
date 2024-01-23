@@ -1,4 +1,4 @@
-
+{{-- forgetpassword section --}}
 
 <body>
     <div class="">
