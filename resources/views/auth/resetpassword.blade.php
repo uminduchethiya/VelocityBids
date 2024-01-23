@@ -16,7 +16,7 @@
 
             <div class="md:w-1/2 h-screen bg-opacity-50 rounded-lg md:bg-white md:rounded-none z-10">
                 <div class="md:text-start mx-10 mt-10 text-center">
-                    <h1 class="text-primaryColor font-anton md:text-5xl text-3xl">Rest Password
+                    <h1 class="text-buttonorange font-bold   font-anton md:text-5xl text-3xl">Rest Password
                     </h1>
                     <h1 class="text-black font-boogaloo text-2xl mt-5">Enter the email address associated with your
                         account</h1>
@@ -46,7 +46,7 @@
 
                                 <button type="button" onclick="togglePassword('new_password')"
                                     class="absolute inset-y-0 right-0 px-2 py-1.5 text-gray-500 focus:outline-none">
-                                    <img id="new_passwordToggleIcon" src="{{ asset('Images/hide.png') }}" alt="Toggle Password"
+                                    <img id="new_passwordToggleIcon" src="{{ asset('img/hide.png') }}" alt="Toggle Password"
                                         class="w-8 h-8">
                                 </button>
                             </div>
@@ -69,7 +69,7 @@
 
                                 <button type="button" onclick="togglePassword('new_password_confirmation')"
                                     class="absolute inset-y-0 right-0 px-2 py-1.5 text-gray-500 focus:outline-none">
-                                    <img id="new_password_confirmationToggleIcon" src="{{ asset('Images/hide.png') }}"
+                                    <img id="new_password_confirmationToggleIcon" src="{{ asset('img/hide.png') }}"
                                         alt="Toggle Password" class="w-8 h-8">
                                 </button>
                             </div>
@@ -89,7 +89,7 @@
 
 
                         <button type="submit"
-                            class="w-full px-20 py-3 text-white bg-primaryColor rounded-3xl mt-5 font-boogaloo md:text-2xl ">RESET PASSWORD   </button>
+                            class="w-full px-20 py-3 text-black  bg-primaryColor rounded-3xl mt-5 font-boogaloo md:text-lg font-bold  bg-buttonorange hover:bg-orange-400    ">RESET PASSWORD   </button>
                     </form>
                     <script>
                         function togglePassword(inputId) {
@@ -98,10 +98,10 @@
 
                             if (passwordInput.type === "password") {
                                 passwordInput.type = "text";
-                                toggleIcon.src = "{{ asset('Images/view.png') }}";
+                                toggleIcon.src = "{{ asset('img/view.png') }}";
                             } else {
                                 passwordInput.type = "password";
-                                toggleIcon.src = "{{ asset('Images/hide.png') }}";
+                                toggleIcon.src = "{{ asset('img/hide.png') }}";
                             }
                         }
                     </script>
@@ -111,7 +111,7 @@
 
 
             <div class="md:w-1/2 md:h-full">
-                <img src="{{ asset('Images/Rectangle162.png') }}" alt="image"
+                <img src="{{ asset('img/home2.jpeg') }}" alt="image"
                     class='w-full md:h-screen h-[940px] md:opacity-100 opacity-20 md:mt-0 -mt-[900px] ' />
                 {{-- <div class="bg-[url('../images/Rectangle162.png')] bg-cover h-screen md:mt-0 '"> </div> --}}
             </div>
