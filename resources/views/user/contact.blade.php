@@ -58,37 +58,35 @@
         </div>
         <div class="flex flex-wrap mb-4">
             <div class="w-full sm:w-1/1 md:w-1/2 lg:w-1/2 xl:w-1/2 px-4 pt-4 ">
-                <form class="mb-12 w-full md:px-3 lg:mb-0 lg:w-full lg:px-6">
-
+                <form class="mb-12 w-full md:px-3 lg:mb-0 lg:w-full lg:px-6" method="POST" action="{{ route('contact.submit')}}">
+                    @csrf
+                
                     <div class="mb-3 w-full">
-                        <label class="block font-medium mb-[2px] text-orange-600" htmlFor="exampleInput90">
+                        <label class="block font-medium mb-[2px] text-orange-600" for="name">
                             Name
                         </label>
-                        <input type="text" class="px-2 py-2 border w-full outline-none rounded-md"
-                            id="exampleInput90" placeholder="Name" />
+                        <input type="text" name="name" id="name" class="px-2 py-2 border w-full outline-none rounded-md" placeholder="Name" />
                     </div>
-
+                
                     <div class="mb-3 w-full">
-                        <label class="block font-medium mb-[2px] text-orange-600" htmlFor="exampleInput90">
+                        <label class="block font-medium mb-[2px] text-orange-600" for="email">
                             Email
                         </label>
-                        <input type="email" class="px-2 py-2 border w-full outline-none rounded-md"
-                            id="exampleInput90" placeholder="Enter your email address" />
+                        <input type="email" name="email" id="email" class="px-2 py-2 border w-full outline-none rounded-md" placeholder="Enter your email address" />
                     </div>
-
+                
                     <div class="mb-3 w-full">
-                        <label class="block font-medium mb-[2px] text-orange-600" htmlFor="exampleInput90">
+                        <label class="block font-medium mb-[2px] text-orange-600" for="message">
                             Message
                         </label>
-                        <textarea class="px-2 py-2 border rounded-[5px] w-full outline-none" name="" id=""></textarea>
+                        <textarea name="message" id="message" class="px-2 py-2 border rounded-[5px] w-full outline-none" placeholder="Your message"></textarea>
                     </div>
-
-                    <button type="button"
-                        class=" inline-block w-full rounded bg-orange-600 px-6 py-2.5 font-medium uppercase leading-normal text-white hover:shadow-md hover:bg-orange-700">
+                
+                    <button type="submit" class="inline-block w-full rounded bg-orange-600 px-6 py-2.5 font-medium uppercase leading-normal text-white hover:shadow-md hover:bg-orange-700">
                         Send
                     </button>
-
                 </form>
+                
             </div>
             <div class="w-full sm:w-1/1 md:w-1/2 lg:w-1/2 xl:w-1/2 border-black px-4 pt-4">
                 <div class="mt-10 mb">
