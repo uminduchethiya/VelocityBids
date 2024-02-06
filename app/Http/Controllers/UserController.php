@@ -19,7 +19,7 @@ class UserController extends Controller
     }
   
 
-public function submitForm(Request $request)
+public function   submitForm(Request $request)
 {
     // Validate the form data
     $request->validate([
