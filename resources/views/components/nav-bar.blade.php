@@ -1,6 +1,6 @@
 <!-- resources/views/header.blade.php -->
 
-<header class='z-20 flex items-center w-full bg-white header md:mb-4'>
+<header class=' absolute z-50 flex items-center w-full bg-white header md:mb-4'>
     <div class="container font-boogaloo">
         <div class="flex items-center justify-between">
             <!-- Logo -->
