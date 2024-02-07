@@ -82,12 +82,12 @@
     <div class="flex items-center h-20 gap-4 px-5">
         <div class="md:block">
             <button type="button"
-                class="w-28 md:w-28 h-10 px-4 text-white bg-orange-500 hover:bg-orange-700 rounded-lg font-extrabold">
+                class="w-28 md:w-28 h-10 px-4 text-white bg-buttonorange hover:bg-orange-700 rounded-lg font-extrabold">
                 <a href="{{ route('bid.add-bid') }}">Bid now!</a>
             </button>
         </div>
         <div class="flex items-center">
-            <a href="" class="pr-4 text-gray-800 border-r-2 border-primaryColor hover:text-orange-600">
+            <a href="" class="pr-4 text-gray-800 border-r-2 border-primaryColor hover:text-orange-500">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
