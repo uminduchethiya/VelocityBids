@@ -6,7 +6,7 @@
             <!-- Logo -->
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="{{ asset('img/logo.png') }}" class="h-16 " alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-transparent">VelocityBids</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-transparent hidden md:block">VelocityBids</span>
             </a>
             <!-- menu -->
             <!-- resources/views/your-view.blade.php -->

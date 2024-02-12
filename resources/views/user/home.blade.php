@@ -31,11 +31,15 @@
 
     <!-- Slider main container -->
     <div class="swiper w-full h-screen z-0">
+
+           {{-- mobile home --}}
+   
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide  relative">
-                <img src="{{ asset('img/login_car.jpg') }}" class="w-full absolute" alt="Flowbite Logo" />
+            <div class="swiper-slide hidden md:block relative">
+                <img src="{{ asset('img/login_car.jpg') }}" class="w-full absolute lg" alt="Flowbite Logo" />
+              
 
                 <p class="text-white text-[70px] font-bold  absolute  mt-[100px] ml-[60px] ">Buy it cheap,<br><span class=" ">sell it at the auction</span> </p>
                 <div class="  mt-[500px] ml-[60px] ">
@@ -50,26 +54,49 @@
                 </div>
 
             </div>
+            <div class=" md:hidden  h-screen">
+                <img src="{{ asset('img/mobilehome3.jpg') }}" class="w-full absolute  mt-24 h-3/5 lg" alt="Flowbite Logo" />
+                <div class="  mt-[500px]  mx-5 justify-center ">
+                    <p class="text-white text-[34px]  -mt-80  font-bold  absolute  " >Auction is a collector’s <br><span class=" ">second wife</span>
+                    </p> <div class="items-cente mx-7 ">
+                        <a href="#"
+                        class="bg-buttonorange text-white  py-3  rounded-lg ml-0 absolute font-bold  h-[50px] w-[130px]   text-center justify-center  mt-14">Place
+                        Bid</a>
+                    <a href="#"
+                        class="bg-white text-black px-4 py-3 rounded-lg ml-[200px] absolute font-bold h-[50px] w-[130px]  text-center mt-14">Check
+                        Car</a>
+                    </div>
+                  
+
+
+                </div>
+                
+            </div>
+            
+            
+ 
 
 
             <div class="swiper-slide  relative">
-                <img src="{{ asset('img/login_car.jpg') }}" class="w-full absolute" alt="Flowbite Logo" />
+                <img src="{{ asset('img/login_car.jpg') }}" class="w-full absolute hidden md:block" alt="Flowbite Logo" />
 
-                <p class="text-white text-[70px] font-bold  absolute  mt-[100px] ml-[60px] ">Auction is a collector’s <br><span class=" ">second wife</span> </p>
+                <p class="text-white text-[70px] font-bold  absolute  mt-[100px] ml-[60px] hidden md:block">Auction is a collector’s <br><span class=" ">second wife</span> </p>
                 <div class="  mt-[500px] ml-[60px] ">
                     <a href="#"
-                        class="bg-buttonorange text-white  py-3  rounded-lg ml-0 absolute font-bold  h-[50px] w-[130px]  text-center justify-center">Place
+                        class="bg-buttonorange text-white  py-3  rounded-lg ml-0 absolute font-bold  h-[50px] w-[130px]  text-center justify-center  hidden md:block">Place
                         Bid</a>
                     <a href="#"
-                        class="bg-white text-black px-4 py-3 rounded-lg ml-[150px] absolute font-bold h-[50px] w-[130px] text-center">Check
+                        class="bg-white text-black px-4 py-3 rounded-lg ml-[150px] absolute font-bold h-[50px] w-[130px] text-center  hidden md:block">Check
                         Car</a>
-
-
-
                 </div>
 
             </div>
         </div>
+        {{-- <div class=" h-screen">
+            <img src="{{ asset('img/Homecar1.png') }}" class="w-full absolute md:hidden block lg" alt="Flowbite Logo" />
+        </div> --}}
+
+        
 
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -83,8 +110,9 @@
     </div>
 
 
+
     {{-- Search bar Section --}}
-    <div class="-mt-32 z-50">
+    <div class="-mt-36 z-50 hidden md:block">
         <div class=" ml-16 absolute flex justify-center items-center p-2 md:p-0">
             <div class="border border-gray-50 h-[180px] w-[1350px] p-6 grid grid-cols-1  bg-white shadow-lg rounded-lg">
                 <div class="flex flex-col md:flex-row gap-7">
@@ -159,10 +187,10 @@
 
     {{-- Action Section --}}
     <div>
-        <div class=" font-bold text-black text-3xl ml-16 mt-[250px]">Auctions</div>
+        <div class=" font-bold text-black text-3xl ml-16 -mt-[200px] md:mt-56">Auctions</div>
 
-        <div class="flex flex-col items-center justify-center w-full gap-5 md:flex-row md:mt-8 md:p-2 md:gap-20 ">
-            <div class="flex flex-row gap-16  md:flex-row ml-10 ">
+        <div class="flex flex-col items-center justify-center w-full gap-5 md:flex-row md:mt-8 md:p-2 md:gap-20  ">
+            <div class="flex flex-col md:flex-row md:justify-center md:items-start md:gap-5 md:w-full ">
 
 
 
@@ -256,7 +284,7 @@
 
 
         <div class="flex flex-col items-center justify-center w-full gap-5 md:flex-row md:mt-8 md:p-2 md:gap-20 ">
-            <div class="flex flex-row gap-16  md:flex-row ml-10 ">
+            <div class="flex flex-col md:flex-row md:justify-center md:items-start md:gap-5 md:w-full">
 
 
 
@@ -349,7 +377,7 @@
         </div>
     </div>
     <div class="">
-        <div class="font-bold text-black text-3xl ml-16 mt-[150px]">About Us</div>
+        <div class="font-bold text-black text-3xl ml-16 mt-[150px]  text-center justify-center md:text-left ">About Us</div>
         <div class="flex flex-wrap md:flex-row-reverse ml-16">
             <!-- Common Text Section -->
             <div class="w-full p-8 pl-10 md:w-1/2 md:text-left md:mt-14">
@@ -372,6 +400,66 @@
             </div>
         </div>
     </div>
+
+     <div class="container text-center md:h-[600px] flex flex-col items-center">
+            <div class="flex flex-col mt-8 md:mt-32">
+                <h1 class="text-4xl font-black md:text-5xl">Why Choose <span class="text-primaryColor">Us</span></h1>
+                <p class="mt-4 font-bold text-gray-600 md:mt-8 md:text-xl">Discover the Difference with Us</p>
+            </div>
+
+            <!-- category list -->
+            <div class="flex flex-col mt-4 md:flex-row md:mt-16 md:p-2">
+                <!-- Row 1: All Kind of Pizza Flavors and Fresh Foods -->
+                <div class="flex flex-row md:flex-row">
+                    <div class="flex flex-col items-center transition-transform transform group hover:scale-125 mx-10">
+                        <div class="p-4 rounded-full bg-primaryColor">
+                            <img src="{{asset('img/world.png')}}"  alt=""
+                                class='object-cover w-16 h-16' />
+                        </div>
+                        <label for=""
+                            class='mt-4 font-extrabold md:text-xl text-md text-primaryColor hover:text-primaryColor'>Wide Selection</label>
+                        <p class="mt-4 md:mt-0">Find the perfect vehicle from our diverse range, catering to all preferences and budgets.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center transition-transform transform group hover:scale-125 mx-10">
+                        <div class="p-4 rounded-full bg-primaryColor">
+                            <img src="{{asset('img/quality.png')}}" alt=""
+                                class='object-cover w-16 h-16' />
+                        </div>
+                        <label for=""
+                            class='mt-4 font-extrabold md:text-xl text-md text-primaryColor hover:text-primaryColor'>Quality Assurance</label>
+                        <p class="mt-4 md:mt-0">Rest easy knowing all vehicles meet stringent quality standards for reliability.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-row">
+                    <!-- Row 2: Best Teast and On Time Delivery -->
+                    <div
+                        class="flex flex-col items-center transition-transform transform group hover:scale-125 mx-10">
+                        <div class="p-4 rounded-full bg-primaryColor">
+                            <img src="{{asset('img/trust.png')}}" alt=""
+                                class='object-cover w-16 h-16' />
+                        </div>
+                        <label for=""
+                            class='mt-4 font-extrabold md:text-xl text-md text-primaryColor hover:text-primaryColor'>Trust and Security</label>
+                        <p class="mt-4 md:mt-0">Shop with confidence knowing your transactions are secure and your data is protected.</p>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center transition-transform transform group hover:scale-125 mx-10">
+                        <div class="p-4 rounded-full bg-primaryColor">
+                            <img src="{{asset('img/competitive.png')}}"  alt=""
+                                class='object-cover w-16 h-16' />
+                        </div>
+                        <label for=""
+                            class='mt-4 font-extrabold md:text-xl text-md text-primaryColor hover:text-primaryColor'>Competitive Pricing</label>
+                        <p class="mt-4 md:mt-0">Enjoy unbeatable prices and exclusive deals unavailable elsewhere.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
