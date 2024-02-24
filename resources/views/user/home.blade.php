@@ -33,13 +33,13 @@
     <div class="swiper w-full h-screen z-0">
 
            {{-- mobile home --}}
-   
+
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide hidden md:block relative">
                 <img src="{{ asset('img/login_car.jpg') }}" class="w-full absolute lg" alt="Flowbite Logo" />
-              
+
 
                 <p class="text-white text-[70px] font-bold  absolute  mt-[100px] ml-[60px] ">Buy it cheap,<br><span class=" ">sell it at the auction</span> </p>
                 <div class="  mt-[500px] ml-[60px] ">
@@ -66,15 +66,15 @@
                         class="bg-white text-black px-4 py-3 rounded-lg ml-[200px] absolute font-bold h-[50px] w-[130px]  text-center mt-14">Check
                         Car</a>
                     </div>
-                  
+
 
 
                 </div>
-                
+
             </div>
-            
-            
- 
+
+
+
 
 
             <div class="swiper-slide  relative">
@@ -96,7 +96,7 @@
             <img src="{{ asset('img/Homecar1.png') }}" class="w-full absolute md:hidden block lg" alt="Flowbite Logo" />
         </div> --}}
 
-        
+
 
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -112,9 +112,9 @@
 
 
     {{-- Search bar Section --}}
-    <div class="-mt-36 z-50 hidden md:block">
-        <div class=" ml-16 absolute flex justify-center items-center p-2 md:p-0">
-            <div class="border border-gray-50 h-[180px] w-[1350px] p-6 grid grid-cols-1  bg-white shadow-lg rounded-lg">
+    <div class="-mt-36 z-50 hidden  md:block">
+        <div class=" md:ml-[60px] lg:ml-[120px]  absolute flex justify-center items-center p-2 md:p-0  ">
+            <div class="border border-gray-50 lg:h-[180px] lg:w-[1350px] xl:h[1200px] xl:w-[1200px]  p-6 grid grid-cols-1  bg-white shadow-lg rounded-lg">
                 <div class="flex flex-col md:flex-row gap-7">
 
 
@@ -376,19 +376,20 @@
 
         </div>
     </div>
+    {{-- about us section --}}
     <div class="">
-        <div class="font-bold text-black text-3xl ml-16 mt-[150px]  text-center justify-center md:text-left ">About Us</div>
+        <div class="font-bold text-black text-4xl md:ml-16 ml-7  mt-[150px]   text-center justify-center md:text-left ">About Us</div>
         <div class="flex flex-wrap md:flex-row-reverse ml-16">
             <!-- Common Text Section -->
-            <div class="w-full p-8 pl-10 md:w-1/2 md:text-left md:mt-14">
-                <div class="mt-8">
-                    <p class="mb-4 text-2xl font-bold text-center">Our Story</p>
-                    <p class="text-lg md:text-left text-center">
+            <div class="w-full p-8 pl-10 md:w-1/2 md:text-left md:mt-14 ">
+                <div class=" mr-10">
+
+                    <p class="text-2xl  md:text-left text-center">
                         Welcome to Volocity Bids, where passion for vehicles meets innovation in online bidding. Founded
                         by
                         enthusiasts, our platform redefines the thrill of buying and selling automobiles and parts.
                     </p><br>
-                    <p class="text-lg md:text-left text-center">
+                    <p class="text-2xl md:text-left text-center">
                         Volocity Bids is more than a marketplace; it's a dynamic community where transparency and trust
                         drive every auction. Join us on the road to your next automotive adventure.
                     </p>
@@ -396,19 +397,19 @@
             </div>
             <!-- Desktop View -->
             <div class="hidden w-full  text-center md:w-1/2 md:flex md:flex-col md:justify-center md:items-center ">
-                <img src="{{ asset('img/about-story.png') }}" class="w-auto h-auto" alt="Flowbite Logo" />
+                <img src="{{ asset('img/about.png') }}" class="w-auto h-auto mr-72   " alt="Flowbite Logo" />
             </div>
         </div>
     </div>
 
-     <div class="container text-center md:h-[600px] flex flex-col items-center">
+     <div class=" text-center md:h-[600px] flex flex-col items-center">
             <div class="flex flex-col mt-8 md:mt-32">
-                <h1 class="text-4xl font-black md:text-5xl">Why Choose <span class="text-primaryColor">Us</span></h1>
+                <h1 class="text-4xl font-bold md:text-5xl">Why Choose <span class="text-primaryColor">Us</span></h1>
                 <p class="mt-4 font-bold text-gray-600 md:mt-8 md:text-xl">Discover the Difference with Us</p>
             </div>
 
             <!-- category list -->
-            <div class="flex flex-col mt-4 md:flex-row md:mt-16 md:p-2">
+            <div class="flex flex-col mt-4 md:flex-row md:mt-16 md:p-2 md:ml-10">
                 <!-- Row 1: All Kind of Pizza Flavors and Fresh Foods -->
                 <div class="flex flex-row md:flex-row">
                     <div class="flex flex-col items-center transition-transform transform group hover:scale-125 mx-10">
