@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BidController;
@@ -29,7 +30,7 @@ Route::post('/contact', [UserController::class, 'submitForm'])->name('contact.su
 Route::get('/about', [UserController::class, 'about'])->name('user.about');
 Route::get('/login',[AuthController::class,'login_index'])->name('login_index');
 Route::get('/register',[AuthController::class,'register_index'])->name('register_index');
-Route::get('/home',[HomeContrller::class,'index'])->name('index');
+Route::get('/home',[HomeContrller::class,'index'])->name('home');
 
 
 Route::get('/forgetpassword', [AuthController::class, 'forgetpassword_index'])->name('forgetpassword');
@@ -60,3 +61,11 @@ Route::prefix('google')->name('google.')->group(function () {
     Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login');
     Route::any('callback', [GoogleController::class, 'callbackFormGoogle'])->name('callback');
 });
+
+
+//admin
+Route::get('/admin/dashboard',[DashboardController::class,'index'])->name('admin.dashboard');
+Route::get('/admin/customerlist', [UserController::class, 'view'])->name('admin.customerlist');
+Route::get('/user/{id}',[UserController::class,'edit'])->name('admin.user.customerEdit');
+Route::post('/user/{id}',[UserController::class,'update'])->name('admin.user.customerUpdate');
+Route::delete('user/{user}/delete', [UserController::class, 'destroy'])->name('users.destroy');
