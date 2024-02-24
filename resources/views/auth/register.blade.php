@@ -196,10 +196,10 @@
                 </form>
             </div>
 
-            {{-- <div class="hidden lg:block w-auto h-auto    bg-cover  mt-44 rounded-full">
+            <div class="hidden lg:block w-auto h-auto    bg-cover  mt-44 rounded-full">
                 <img src="{{ asset('img/registercarbgremoved1.png') }}"
                     class="h-[400px] md:h-[500px] rounded-br-[150px] w-full">
-            </div> --}}
+            </div>
 
         </div>
 
