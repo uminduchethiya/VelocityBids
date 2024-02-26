@@ -16,45 +16,45 @@
                     <div class="mt-8 grid grid-cols-2 grid-row-2 md:grid-cols-4 md:gap-4 gap-16 space-y-2 md:space-y-0 md:h-[350px] font-boogaloo">
                         <div
                             class="grid-2 bg-white p-4 shadow-lg rounded-2xl md:w-[195px] md:h-[100px] w-[160px] h-[100px] relative">
-                            <h2 class="pb-1 text-sm font-semibold text-black">Total sales</h2>
-                            <img src="{{ URL('assets/increase.png') }}" alt="Arrow"
+                            <h2 class="pb-1 text-sm font-semibold text-black">Total Users</h2>
+                            <img src="{{ asset('img/customer 1.png') }}" alt="Arrow"
+                                class="absolute md:left-40 top-4 left-32">
+                            <h1 class="pb-1 mt-3 text-xl font-bold text-black">{{ $userCount }}</h1>
+                        </div>
+
+                        <div
+                            class="grid-2 bg-white p-4 shadow-lg rounded-2xl md:w-[195px] md:h-[100px] w-[160px] h-[100px] relative">
+                            <h2 class="pb-1 text-sm font-semibold text-black">Total Admin</h2>
+                            <img src="{{ asset('img/customer 1.png') }}"alt="Arrow"
                                 class="absolute md:left-40 top-4 left-32">
                             <h1 class="pb-1 mt-3 text-xl font-bold text-black">$1240</h1>
                         </div>
 
                         <div
                             class="grid-2 bg-white p-4 shadow-lg rounded-2xl md:w-[195px] md:h-[100px] w-[160px] h-[100px] relative">
-                            <h2 class="pb-1 text-sm font-semibold text-black">Total Orders</h2>
-                            <img src="{{ URL('assets/solarred.png') }}" alt="Arrow"
-                                class="absolute md:left-40 top-4 left-32">
-                            <h1 class="pb-1 mt-3 text-xl font-bold text-black">$1240</h1>
-                        </div>
-
-                        <div
-                            class="grid-2 bg-white p-4 shadow-lg rounded-2xl md:w-[195px] md:h-[100px] w-[160px] h-[100px] relative">
-                            <h2 class="pb-1 text-sm font-semibold text-black">Total Customers</h2>
-                            <img src="{{ URL('assets/customer1.png') }}" alt="Arrow"
+                            <h2 class="pb-1 text-sm font-semibold text-black">Total Bids</h2>
+                            <img src="{{ URL('img/solar_bag-bold.png') }}" alt="Arrow"
                                 class="absolute md:left-40 top-4 left-32">
                             <h1 class="pb-1 mt-3 text-xl font-bold text-black">$1240</h1>
                         </div>
                         <div
                             class="grid-2 bg-white p-4 shadow-lg rounded-2xl md:w-[195px] md:h-[100px] w-[160px] h-[100px] relative">
-                            <h2 class="pb-1 text-sm font-semibold text-black">New Customers</h2>
-                            <img src="{{ URL('assets/solarred.png') }}" alt="Arrow"
+                            <h2 class="pb-1 text-sm font-semibold text-black">Total Vehicle</h2>
+                            <img src="{{ URL('img/solar_bag-bold.png') }}" alt="Arrow"
                                 class="absolute md:left-40 top-4 left-32">
                             <h1 class="pb-1 mt-3 text-xl font-bold text-black">$1240</h1>
                         </div>
                         <div
                             class="grid-2 bg-white p-4 shadow-lg rounded-2xl md:w-[195px] md:h-[100px] w-[160px] h-[100px] relative">
-                            <h2 class="pb-1 text-sm font-semibold text-black">Total Menu</h2>
-                            <img src="{{ URL('assets/menu1.png') }}" alt="Arrow"
+                            <h2 class="pb-1 text-sm font-semibold text-black">Total Parts</h2>
+                            <img src="{{ URL('img/menu 1.png') }}" alt="Arrow"
                                 class="absolute md:left-40 top-4 left-32">
                             <h1 class="pb-1 mt-3 text-xl font-bold text-black">$1240</h1>
                         </div>
                         <div
                             class="grid-2 bg-white p-4 shadow-lg rounded-2xl md:w-[195px] md:h-[100px] w-[160px] h-[100px] relative">
-                            <h2 class="pb-1 text-sm font-semibold text-black">Category</h2>
-                            <img src="{{ URL('assets/solarred.png') }}" alt="Arrow"
+                            <h2 class="pb-1 text-sm font-semibold text-black">Total Sales</h2>
+                            <img src="{{ URL('img/increase 1.png') }}" alt="Arrow"
                                 class="absolute md:left-40 top-4 left-32">
                             <h1 class="pb-1 mt-3 text-xl font-bold text-black">$1240</h1>
                         </div>
