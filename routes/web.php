@@ -29,8 +29,9 @@ Route::post('/contact', [UserController::class, 'submitForm'])->name('contact.su
 
 Route::get('/about', [UserController::class, 'about'])->name('user.about');
 Route::get('/login',[AuthController::class,'login_index'])->name('login_index');
-Route::get('/register',[AuthController::class,'register_index'])->name('register_index');
+
 Route::get('/home',[HomeContrller::class,'index'])->name('home');
+Route::get('/vehicle/{id}',[BidController::class,'vehicleIndex'])->name('vehicle_Index');
 
 
 Route::get('/forgetpassword', [AuthController::class, 'forgetpassword_index'])->name('forgetpassword');
@@ -44,8 +45,10 @@ Route::post('/resetpassword',[AuthController::class,'resetpasswordPost'])->name(
 
 // Bid Controller
 Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
+Route::post('/bid/add-bid',[BidController::class,'addBidInfo'])->name('bid.addBidInfo');
 
 // register
+Route::get('/register',[AuthController::class,'register_index'])->name('register_index');
 Route::POST('/register', [AuthController::class, 'user_register'])->name('register');
 
 

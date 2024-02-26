@@ -14,7 +14,7 @@
             <div x-data="{ open: false }" class="navigation">
                 <ul class="menu md:flex gap-[2.7rem] hidden">
                     <li>
-                        <a href="#" class="text-black hover:text-orange-600">Home</a>
+                        <a href="{{route('home')}}" class="text-black hover:text-orange-600">Home</a>
                     </li>
                     <li x-data="{ open: false }" @click.away="open = false" class="relative group">
                         <a
@@ -134,7 +134,7 @@
         <!-- Your mobile menu items here -->
         <ul class="container flex flex-row items-center gap-10 text-xl menu">
             <li>
-                <a href="" class="flex flex-col items-center text-white">
+                <a href="{{route('home')}}" class="flex flex-col items-center text-white">
                     <img src="{{ asset('img/home-icon.png') }}" alt="" class="w-6 h-6 mb-1 ">
                     Home
                 </a>
