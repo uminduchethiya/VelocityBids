@@ -202,11 +202,11 @@
                 @foreach ($vehicles->sortByDesc('created_at')->take(4) as $vehicle)
                     <div class="w-72 h-80 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
-                            <img class="rounded-t-lg" src="{{ Storage::url($vehicle->image1) }}" alt="" />
+                            <img class="rounded-t-lg w-full h-[180px]" src="{{ Storage::url($vehicle->image1) }}" alt="" />
                         </a>
                         <div class="p-5">
                             <a href="#">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $vehicle->year }}</h5>
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $vehicle->vehicle_name }}</h5>
                             </a>
                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
                                     <span>{{ $vehicle->year }}|<span>
@@ -214,8 +214,8 @@
                                     <span>{{$vehicle->Make}}|</span>
                                     <span>{{$vehicle->mileage}}</span>
                             </p>
-                            <a href="#" class="inline-flex items-center py-2 text-sm font-medium text-center text-black rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Current Bid: <span class="text-buttonorange">200000$</span>
+                            <a href="#" class="inline-flex text-red-600 items-center py-2 text-sm font-medium text-center  rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                AWAITING BID
                             </a>
                         </div>
                     </div>
@@ -230,20 +230,20 @@
                 @foreach ($vehicles->sortByDesc('created_at')->slice(4, 4) as $vehicle)
                     <div class="w-72 h-80 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
-                            <img class="rounded-t-lg" src="{{ Storage::url($vehicle->image1) }}" alt="" />
+                            <img class="rounded-t-lg w-full h-[180px]" src="{{ Storage::url($vehicle->image1) }}" alt="" />
                         </a>
                         <div class="p-5">
                             <a href="#">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">mmm</h5>
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $vehicle->vehicle_name }}</h5>
                             </a>
                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                <span>{{ $vehicle->year }}|<span>
+                                <span>{{$vehicle->year }}|<span>
                                 <span>{{$vehicle->Model}}|</span>
                                 <span>{{$vehicle->Make}}|</span>
                                 <span>{{$vehicle->mileage}}</span>
                             </p>
-                            <a href="#" class="inline-flex items-center py-2 text-sm font-medium text-center text-black rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Current Bid: <span class="text-buttonorange">200000$</span>
+                            <a href="#" class="inline-flex text-red-600 items-center py-2 text-sm font-medium text-center  rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                AWAITING BID
                             </a>
                         </div>
                     </div>

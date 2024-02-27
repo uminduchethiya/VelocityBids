@@ -32,7 +32,7 @@
                     <div class="w-7/12">
                         <label for="">Phone Number </label>
                         <input type="number" placeholder="Phone Number " name="c_number"
-                            value="{{ $user->phone_number }}"
+                            value="{{ $user->c_number }}"
                             class="w-full p-2 border border-gray-800 rounded-lg opacity-60"> @error('c_number')
                             <div class="text-red-500">{{ $message }}</div>
                         @enderror
