@@ -47,6 +47,15 @@ Route::post('/resetpassword',[AuthController::class,'resetpasswordPost'])->name(
 Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
 Route::post('/bid/add-bid',[BidController::class,'addBidInfo'])->name('bid.addBidInfo');
 
+
+//vehcile data view,update,delete
+Route::get('/bid/bidInfoView/{id}',[BidController::class,'bidInfoView'])->name('bid.infoView');
+Route::post('/bid/bidInfoView/{id}',[BidController::class,'bidUpdate'])->name('bid.adminupdate');
+Route::delete('/bid/bidInfoDelete/{vehicle}', [BidController::class, 'deleteVehicle'])->name('bid.delete');
+
+
+
+
 // register
 Route::get('/register',[AuthController::class,'register_index'])->name('register_index');
 Route::POST('/register', [AuthController::class, 'user_register'])->name('register');

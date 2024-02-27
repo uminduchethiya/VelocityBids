@@ -44,15 +44,12 @@
                 </select>
             </div>
 
-            <!-- Fuel Type -->
             <div class="w-full md:w-1/2 px-4 mb-4">
-                <label for="fuel_type" class="block text-gray-700 font-bold mb-2">Fuel Type:</label>
-                <select name="fuel_type" id="fuel_type" class="w-full px-4 py-2 border rounded-md">
-                    <option value="petrol">Petrol</option>
-                    <option value="diesel">Diesel</option>
-                    <option value="electric">Electric</option>
-                </select>
+                <label for="vehicle_name" class="block text-gray-700 font-bold mb-2">Vehicle Name:</label>
+                <input type="text" name="vehicle_name" id="vehicle_name" class="w-full px-4 py-2 border rounded-md">
             </div>
+
+
         </div>
 
 
@@ -99,6 +96,20 @@
                     <option value="Kurunagale">Kurunagale</option>
                 </select>
             </div>
+        </div>
+
+        <div class="flex flex-wrap -mx-4">
+             <!-- Fuel Type -->
+            <div class="w-full md:w-1/2 px-4 mb-4">
+                <label for="fuel_type" class="block text-gray-700 font-bold mb-2">Fuel Type:</label>
+                <select name="fuel_type" id="fuel_type" class="w-full px-4 py-2 border rounded-md">
+                    <option value="petrol">Petrol</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="electric">Electric</option>
+                </select>
+            </div>
+
+
         </div>
 
 
@@ -194,7 +205,7 @@
         <!-- Bid Now Button -->
         <div class="mb-4">
             <button type="submit"
-                class="w-full md:w-28 h-10 px-4 text-white bg-orange-500 hover:bg-orange-700 rounded-lg font-extrabold">
+                class="w-full md:w-28 h-10 px-4 text-white bg-orange-500 hover:bg-orange-700 rounded-lg font-extrabold"  onclick="return confirm('if your add is matching our rules ,admin response with you after 3 hours')">
                 Bid Now!
             </button>
         </div>
