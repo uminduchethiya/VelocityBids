@@ -26,6 +26,7 @@ class Vehicle extends Model
         'image3',
         'image4',
         'image5',
+        'action',
 
     ];
 }

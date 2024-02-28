@@ -97,6 +97,7 @@ class BidController extends Controller
         $vehicle->Location = $request->input('Location');
         $vehicle->condescription = $request->input('condescription');
         $vehicle->feadescription = $request->input('feadescription');
+        $vehicle->action=$request->input('action');
 
         $imageFields = ['image1', 'image2', 'image3', 'image4', 'image5'];
         foreach ($imageFields as $fieldName) {

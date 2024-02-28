@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Vehicle;
 class HomeContrller extends Controller
 {
-    public function index(){
-        $vehicles = Vehicle::all(); // Fetch all vehicles from the database
+    public function index()
+    {
+        // Fetch vehicles where the action is 'Available'
+        $vehicles = Vehicle::where('action', 'Available')->get();
 
         return view('user.home', compact('vehicles'));
     }
+
 }

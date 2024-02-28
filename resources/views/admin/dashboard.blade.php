@@ -95,6 +95,10 @@
                                     Fuel Type
                                 </th>
                                 <th
+                                class="hidden px-4 py-2 text-sm font-bold uppercase border-b bg-grey-lightest text-grey-light border-grey-light md:table-cell">
+                                Status
+                            </th>
+                                <th
                                     class="px-4 py-2 text-sm font-bold uppercase border-b rounded-r-full bg-grey-lightest text-grey-light border-grey-light">
                                     Action
                                 </th>
@@ -110,6 +114,7 @@
                                     <td class="px-4 py-2 border-b border-grey-light">{{$vehicleData->Make}}</td>
                                     <td class="px-4 py-2 border-b border-grey-light">{{$vehicleData->mileage}}</td>
                                     <td class="px-4 py-2 border-b border-grey-light">{{$vehicleData->fuel_type}}</td>
+                                    <td class="px-4 py-2 border-b border-grey-light">{{$vehicleData->action}}</td>
                                     <td class="flex gap-2 pr-4 mt-2 px-14 ">
                                         <a href="{{route('bid.infoView',['id'=>$vehicleData->id])}}" class="flex items-center justify-center w-16 h-8 px-2 py-1 ml-1 text-sm text-white border rounded-lg md:block bg-green-700">
                                             View
