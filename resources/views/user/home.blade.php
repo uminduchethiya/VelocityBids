@@ -200,6 +200,7 @@
             <div class="flex flex-col md:flex-row md:justify-center md:items-start md:gap-5 md:w-full">
 
                 @foreach ($vehicles->sortByDesc('created_at')->take(4) as $vehicle)
+                @if($vehicle->action == 'available')
                     <div class="w-72 h-80 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
                             <img class="rounded-t-lg w-full h-[180px]" src="{{ Storage::url($vehicle->image1) }}" alt="" />
@@ -219,6 +220,7 @@
                             </a>
                         </div>
                     </div>
+                    @endif
                 @endforeach
 
             </div>
@@ -228,6 +230,7 @@
             <div class="flex flex-col md:flex-row md:justify-center md:items-start md:gap-5 md:w-full">
 
                 @foreach ($vehicles->sortByDesc('created_at')->slice(4, 4) as $vehicle)
+                @if($vehicle->action == 'available')
                     <div class="w-72 h-80 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
                             <img class="rounded-t-lg w-full h-[180px]" src="{{ Storage::url($vehicle->image1) }}" alt="" />
@@ -247,6 +250,7 @@
                             </a>
                         </div>
                     </div>
+                              @endif
                 @endforeach
 
             </div>
