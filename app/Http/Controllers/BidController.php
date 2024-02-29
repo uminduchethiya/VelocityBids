@@ -140,7 +140,21 @@ class BidController extends Controller
 
     }
 
+public function bidding(Request $request, $id)
+{
+    // Find the vehicle based on the $id
+    $vehicle = Vehicle::find($id);
 
+    // Check if the vehicle was found
+    if (!$vehicle) {
+        // Handle the case where the vehicle is not found
+        abort(404, 'Vehicle not found');
+    }
+
+    // Now you can use $vehicle in your view or perform additional logic
+
+    return view('bid.bidding', compact('vehicle'));
+}
 
 }
 
