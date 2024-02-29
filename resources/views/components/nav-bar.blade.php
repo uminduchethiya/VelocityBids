@@ -4,7 +4,7 @@
     <div class="container font-boogaloo">
         <div class="flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="{{route('home')}}"  class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="{{ asset('img/logo.png') }}" class="h-16 " alt="Flowbite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-transparent hidden md:block">VelocityBids</span>
             </a>
@@ -18,18 +18,18 @@
                     </li>
                     <li x-data="{ open: false }" @click.away="open = false" class="relative group">
                         <a
-                            @click="open = !open" href="#"
+                            @click="open = !open" href="{{route('getallvehicle')}}"
                             class="flex items-center text-black hover:text-orange-600">
-                            Vehicle
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            All Vehicle
+                            {{-- <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            </svg> --}}
                         </a>
 
                         <!-- Dropdown menu -->
-                        <ul x-show="open" @click.away="open = false"
+                        {{-- <ul x-show="open" @click.away="open = false"
                             class="absolute left-0 mt-2 space-y-2 text-black transition-opacity duration-300 ease-in-out bg-white"
                             role="menu">
                             <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Car</a>
@@ -42,28 +42,28 @@
                             </li>
                             <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Boat</a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     <li x-data="{ open: false }" @click.away="open = false" class="relative group"><a
                             @click="open = !open" href="#"
                             class="flex items-center text-black hover:text-orange-600">
                             Parts
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            {{-- <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            </svg> --}}
                         </a>
 
                         <!-- Dropdown menu -->
-                        <ul x-show="open" @click.away="open = false"
+                        {{-- <ul x-show="open" @click.away="open = false"
                             class="absolute left-0 mt-2 space-y-2 text-black transition-opacity duration-300 ease-in-out bg-white"
                             role="menu">
                             <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">abcd</a>
                             </li>
                             <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Part</a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </li>
 
                     <li>
