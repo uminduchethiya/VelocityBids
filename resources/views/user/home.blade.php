@@ -30,19 +30,19 @@
     @include('components.nav-bar')
 
     <!-- Slider main container -->
-    <div class="swiper w-full h-screen z-0">
+    <div class="z-0 w-full h-screen swiper">
 
         {{-- mobile home --}}
 
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide hidden md:block relative">
-                <img src="{{ asset('img/login_car.jpg') }}" class="w-full absolute lg" alt="Flowbite Logo" />
+            <div class="relative hidden swiper-slide md:block">
+                <img src="{{ asset('img/login_car.jpg') }}" class="absolute w-full lg" alt="Flowbite Logo" />
 
 
                 <p class="text-white text-[70px] font-bold  absolute  mt-[100px] ml-[60px] ">Buy it cheap,<br><span
-                        class=" ">sell it at the auction</span> </p>
+                        class="">sell it at the auction</span> </p>
                 <div class="  mt-[500px] ml-[60px] ">
                     <a href="#"
                         class="bg-buttonorange text-white  py-3  rounded-lg ml-0 absolute font-bold  h-[50px] w-[130px]  text-center justify-center">Place
@@ -55,12 +55,12 @@
                 </div>
 
             </div>
-            <div class=" md:hidden  h-screen">
-                <img src="{{ asset('img/mobilehome3.jpg') }}" class="w-full absolute  mt-24 h-3/5 lg"
+            <div class="h-screen  md:hidden">
+                <img src="{{ asset('img/mobilehome3.jpg') }}" class="absolute w-full mt-24 h-3/5 lg"
                     alt="Flowbite Logo" />
                 <div class="  mt-[500px]  mx-5 justify-center ">
                     <p class="text-white text-[34px]  -mt-80  font-bold  absolute  ">Auction is a collector’s <br><span
-                            class=" ">second wife</span>
+                            class="">second wife</span>
                     </p>
                     <div class="items-cente mx-7 ">
                         <a href="#"
@@ -81,12 +81,12 @@
 
 
 
-            <div class="swiper-slide  relative">
-                <img src="{{ asset('img/login_car.jpg') }}" class="w-full absolute hidden md:block"
+            <div class="relative swiper-slide">
+                <img src="{{ asset('img/login_car.jpg') }}" class="absolute hidden w-full md:block"
                     alt="Flowbite Logo" />
 
                 <p class="text-white text-[70px] font-bold  absolute  mt-[100px] ml-[60px] hidden md:block">Auction is a
-                    collector’s <br><span class=" ">second wife</span> </p>
+                    collector’s <br><span class="">second wife</span> </p>
                 <div class="  mt-[500px] ml-[60px] ">
                     <a href="#"
                         class="bg-buttonorange text-white  py-3  rounded-lg ml-0 absolute font-bold  h-[50px] w-[130px]  text-center justify-center  hidden md:block">Place
@@ -98,8 +98,8 @@
 
             </div>
         </div>
-        {{-- <div class=" h-screen">
-            <img src="{{ asset('img/Homecar1.png') }}" class="w-full absolute md:hidden block lg" alt="Flowbite Logo" />
+        {{-- <div class="h-screen ">
+            <img src="{{ asset('img/Homecar1.png') }}" class="absolute block w-full md:hidden lg" alt="Flowbite Logo" />
         </div> --}}
 
 
@@ -118,7 +118,7 @@
 
 
     {{-- Search bar Section --}}
-    <div class="-mt-36 z-50 hidden  md:block">
+    <div class="z-50 hidden -mt-36 md:block">
         <div class=" md:ml-[60px] lg:ml-[120px]  absolute flex justify-center items-center p-2 md:p-0  ">
             <div
                 class="border border-gray-50 lg:h-[180px] lg:w-[1350px] xl:h[1200px] xl:w-[1200px]  p-6 grid grid-cols-1  bg-white shadow-lg rounded-lg">
@@ -127,7 +127,7 @@
 
                     <div class="pt-6  flex flex-col w-[250px] ">
                         <label for="">Car Maker</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="" selected>Car Maker</option>
                             <option>Audi</option>
                             <option>BMW</option>
@@ -137,7 +137,7 @@
 
                     <div class="pt-6 flex flex-col w-[250px]">
                         <label for="">Car Model</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="">Car Model</option>
                             <option>example</option>
                             <option>example</option>
@@ -147,7 +147,7 @@
 
                     <div class="pt-6 flex flex-col w-[250px]">
                         <label for="">Car Body</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="">Car Model</option>
                             <option>example</option>
                             <option>example</option>
@@ -158,7 +158,7 @@
 
                     <div class="pt-6  flex flex-col w-[250px]">
                         <label for="">Fuel</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="">Car Model</option>
                             <option>example</option>
                             <option>example</option>
@@ -169,7 +169,7 @@
 
                     <div class="pt-6  flex flex-col w-[250px]">
                         <label for="">Color</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="">Car Model</option>
                             <option>example</option>
                             <option>example</option>
@@ -177,7 +177,7 @@
                         </select>
                     </div>
 
-                    <div class=" pt-10 flex flex-col"><button
+                    <div class="flex flex-col pt-10 "><button
                             class="p-2 border bg-buttonorange rounded-md  h-[50px] w-[130px] text-white">Search</button>
                     </div>
 
@@ -218,8 +218,7 @@
                                             <span>{{ $vehicle->Make }}|</span>
                                             <span>{{ $vehicle->mileage }}</span>
                                 </p>
-                                <a href="#"
-                                    class="inline-flex text-red-600 items-center py-2 text-sm font-medium text-center  rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <a href="{{ route('bidding', ['id' => $vehicle->id]) }}" class="inline-flex items-center py-2 text-sm font-medium text-center text-red-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     AWAITING BID
                                 </a>
                             </div>
@@ -253,7 +252,7 @@
                                             <span>{{ $vehicle->mileage }}</span>
                                 </p>
                                 <a href="#"
-                                    class="inline-flex text-red-600 items-center py-2 text-sm font-medium text-center  rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    class="inline-flex items-center py-2 text-sm font-medium text-center text-red-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     AWAITING BID
                                 </a>
                             </div>
@@ -272,18 +271,18 @@
         <div
             class="font-bold text-black text-4xl md:ml-16 ml-7  mt-[150px]   text-center justify-center md:text-left ">
             About Us</div>
-        <div class="flex flex-wrap md:flex-row-reverse ml-16">
+        <div class="flex flex-wrap ml-16 md:flex-row-reverse">
             <!-- Common Text Section -->
             <div class="w-full p-8 pl-10 md:w-1/2 md:text-left md:mt-14 ">
-                <div class=" mr-10">
+                <div class="mr-10 ">
 
-                    <p class="text-2xl  md:text-left text-center">
+                    <p class="text-2xl text-center md:text-left">
                         Welcome to Volocity Bids, where passion for vehicles meets innovation in online bidding.
                         Founded
                         by
                         enthusiasts, our platform redefines the thrill of buying and selling automobiles and parts.
                     </p><br>
-                    <p class="text-2xl md:text-left text-center">
+                    <p class="text-2xl text-center md:text-left">
                         Volocity Bids is more than a marketplace; it's a dynamic community where transparency and
                         trust
                         drive every auction. Join us on the road to your next automotive adventure.
@@ -291,8 +290,8 @@
                 </div>
             </div>
             <!-- Desktop View -->
-            <div class="hidden w-full  text-center md:w-1/2 md:flex md:flex-col md:justify-center md:items-center ">
-                <img src="{{ asset('img/about.png') }}" class="w-auto h-auto mr-72   " alt="Flowbite Logo" />
+            <div class="hidden w-full text-center md:w-1/2 md:flex md:flex-col md:justify-center md:items-center ">
+                <img src="{{ asset('img/about.png') }}" class="w-auto h-auto mr-72 " alt="Flowbite Logo" />
             </div>
         </div>
     </div>
@@ -307,7 +306,7 @@
         <div class="flex flex-col mt-4 md:flex-row md:mt-16 md:p-2 md:ml-10">
             <!-- Row 1: All Kind of Pizza Flavors and Fresh Foods -->
             <div class="flex flex-row md:flex-row">
-                <div class="flex flex-col items-center transition-transform transform group hover:scale-125 mx-10">
+                <div class="flex flex-col items-center mx-10 transition-transform transform group hover:scale-125">
                     <div class="p-4 rounded-full bg-primaryColor">
                         <img src="{{ asset('img/world.png') }}" alt="" class='object-cover w-16 h-16' />
                     </div>
@@ -318,7 +317,7 @@
                         preferences and budgets.</p>
                 </div>
 
-                <div class="flex flex-col items-center transition-transform transform group hover:scale-125 mx-10">
+                <div class="flex flex-col items-center mx-10 transition-transform transform group hover:scale-125">
                     <div class="p-4 rounded-full bg-primaryColor">
                         <img src="{{ asset('img/quality.png') }}" alt="" class='object-cover w-16 h-16' />
                     </div>
@@ -332,7 +331,7 @@
 
             <div class="flex flex-row">
                 <!-- Row 2: Best Teast and On Time Delivery -->
-                <div class="flex flex-col items-center transition-transform transform group hover:scale-125 mx-10">
+                <div class="flex flex-col items-center mx-10 transition-transform transform group hover:scale-125">
                     <div class="p-4 rounded-full bg-primaryColor">
                         <img src="{{ asset('img/trust.png') }}" alt="" class='object-cover w-16 h-16' />
                     </div>
@@ -343,7 +342,7 @@
                         is protected.</p>
                 </div>
 
-                <div class="flex flex-col items-center transition-transform transform group hover:scale-125 mx-10">
+                <div class="flex flex-col items-center mx-10 transition-transform transform group hover:scale-125">
                     <div class="p-4 rounded-full bg-primaryColor">
                         <img src="{{ asset('img/competitive.png') }}" alt=""
                             class='object-cover w-16 h-16' />

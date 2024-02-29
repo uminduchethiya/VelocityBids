@@ -21,11 +21,11 @@
 
 </head>
 
-<body class="bg-white h-screen">
+<body class="h-screen bg-white">
     @include('components.nav-bar')
 
       {{-- Search bar Section --}}
-      <div class="  z-50 hidden   md:block">
+      <div class="z-50 hidden md:block">
         <div class=" md:ml-[60px] md:mt-[110px] lg:ml-[120px]  absolute flex justify-center items-center p-2 md:p-0  ">
             <div
                 class="border border-gray-50 lg:h-[180px] lg:w-[1350px] xl:h[1200px] xl:w-[1200px]  p-6 grid grid-cols-1  bg-white shadow-lg rounded-lg">
@@ -34,7 +34,7 @@
 
                     <div class="pt-6  flex flex-col w-[250px] ">
                         <label for="">Car Maker</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="" selected>Car Maker</option>
                             <option>Audi</option>
                             <option>BMW</option>
@@ -44,7 +44,7 @@
 
                     <div class="pt-6 flex flex-col w-[250px]">
                         <label for="">Car Model</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="">Car Model</option>
                             <option>example</option>
                             <option>example</option>
@@ -54,7 +54,7 @@
 
                     <div class="pt-6 flex flex-col w-[250px]">
                         <label for="">Car Body</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="">Car Model</option>
                             <option>example</option>
                             <option>example</option>
@@ -65,7 +65,7 @@
 
                     <div class="pt-6  flex flex-col w-[250px]">
                         <label for="">Fuel</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="">Car Model</option>
                             <option>example</option>
                             <option>example</option>
@@ -76,7 +76,7 @@
 
                     <div class="pt-6  flex flex-col w-[250px]">
                         <label for="">Color</label>
-                        <select class="border p-2 rounded">
+                        <select class="p-2 border rounded">
                             <option value="">Car Model</option>
                             <option>example</option>
                             <option>example</option>
@@ -84,7 +84,7 @@
                         </select>
                     </div>
 
-                    <div class=" pt-10 flex flex-col"><button
+                    <div class="flex flex-col pt-10 "><button
                             class="p-2 border bg-buttonorange rounded-md  h-[50px] w-[130px] text-white">Search</button>
                     </div>
 
@@ -100,10 +100,10 @@
 
 
     <div class="">
-        <div class="font-bold text-black text-3xl ml-16">Auctions</div>
+        <div class="ml-16 text-3xl font-bold text-black">Auctions</div>
 
         <div class="flex flex-col items-center justify-center w-full gap-5 md:flex-row md:mt-[280px] md:p-2 md:gap-20">
-            <div class="flex flex-wrap justify-center gap-5 md:justify-start md:gap-10 mx-3">
+            <div class="flex flex-wrap justify-center gap-5 mx-3 md:justify-start md:gap-10">
 
                 @foreach ($vehicles as $vehicle)
                     @if($vehicle->action == 'available')
@@ -120,8 +120,9 @@
                                     <span>{{ $vehicle->Model }} | </span>
                                     <span>{{ $vehicle->Make }} | </span>
                                     <span>{{ $vehicle->mileage }}</span>
+                                    <span class="hidden">{{ $vehicle->id }}</span>
                                 </p>
-                                <a href="#" class="inline-flex text-red-600 items-center py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <a href="{{ route('bidding', ['id' => $vehicle->id]) }}" class="inline-flex items-center py-2 text-sm font-medium text-center text-red-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     AWAITING BID
                                 </a>
                             </div>

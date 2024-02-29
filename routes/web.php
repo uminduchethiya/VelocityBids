@@ -47,6 +47,8 @@ Route::post('/resetpassword',[AuthController::class,'resetpasswordPost'])->name(
 // Bid Controller
 Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
 Route::post('/bid/add-bid',[BidController::class,'addBidInfo'])->name('bid.addBidInfo');
+Route::get('/bidding/{id}', [BidController::class, 'bidding'])->name('bidding');
+
 
 
 //vehcile data view,update,delete
@@ -82,3 +84,4 @@ Route::get('/admin/customerlist', [UserController::class, 'view'])->name('admin.
 Route::get('/user/{id}',[UserController::class,'edit'])->name('admin.user.customerEdit');
 Route::post('/user/{id}',[UserController::class,'update'])->name('admin.user.customerUpdate');
 Route::delete('user/{user}/delete', [UserController::class, 'destroy'])->name('users.destroy');
+
