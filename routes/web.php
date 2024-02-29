@@ -24,13 +24,14 @@ use Illuminate\Support\Facades\Facade;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+//homeroute
 Route::get('/contact', [UserController::class, 'contact'])->name('user.contact');
 Route::post('/contact', [UserController::class, 'submitForm'])->name('contact.submit');
-
 Route::get('/about', [UserController::class, 'about'])->name('user.about');
 Route::get('/login',[AuthController::class,'login_index'])->name('login_index');
-
 Route::get('/home',[HomeContrller::class,'index'])->name('home');
+Route::get('/getallvehicle',[HomeContrller::class,'viewAllVehicle'])->name('getallvehicle');
 Route::get('/vehicle/{id}',[BidController::class,'vehicleIndex'])->name('vehicle_Index');
 
 
