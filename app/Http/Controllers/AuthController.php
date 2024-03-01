@@ -84,18 +84,24 @@ class AuthController extends Controller
         }
     }
 
-    public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            // Authentication passed
+public function login(Request $request)
+{
+    $credentials = $request->only('email', 'password');
+
+    if (Auth::attempt($credentials)) {
+        // Authentication passed
+        if (Auth::user()->role == 'admin') {
+            return redirect()->intended('/admin/dashboard');
+        } elseif (Auth::user()->role == 'user') {
             return redirect()->intended('/home');
         }
-
-        // Authentication failed
-        return redirect()->back()->withErrors(['login' => 'Invalid email or password.']);
     }
+
+    // Authentication failed
+    return redirect()->back()->withErrors(['login' => 'Invalid email or password.']);
+}
+
 
     public function forgetpassword_index(){
         return view('auth.forgetpassword');

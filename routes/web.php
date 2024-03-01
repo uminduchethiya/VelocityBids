@@ -23,9 +23,7 @@ use Illuminate\Support\Facades\Facade;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/',[HomeContrller::class,'index'])->name('home');
 
 //homeroute
 Route::get('/contact', [UserController::class, 'contact'])->name('user.contact');
@@ -48,7 +46,9 @@ Route::post('/resetpassword',[AuthController::class,'resetpasswordPost'])->name(
 
 
 // Bid Controller
-Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
+});
 Route::post('/bid/add-bid',[BidController::class,'addBidInfo'])->name('bid.addBidInfo');
 Route::get('/bidding/{id}', [BidController::class, 'bidding'])->name('bidding');
 
@@ -80,27 +80,30 @@ Route::prefix('google')->name('google.')->group(function () {
     Route::any('callback', [GoogleController::class, 'callbackFormGoogle'])->name('callback');
 });
 
-
-//admin
-Route::get('/admin/dashboard',[DashboardController::class,'index'])->name('admin.dashboard');
-Route::get('/admin/customerlist', [UserController::class, 'view'])->name('admin.customerlist');
-Route::get('/user/{id}',[UserController::class,'edit'])->name('admin.user.customerEdit');
-Route::post('/user/{id}',[UserController::class,'update'])->name('admin.user.customerUpdate');
-Route::delete('user/{user}/delete', [UserController::class, 'destroy'])->name('users.destroy');
-
-
-//admin category
-Route::get('/admin/category_list',[CategoryController::class,'view'])->name('admin.categorylist');
-Route::get('/admin/addcategory',[CategoryController::class,'viewCategory'])->name('admin.viewcategory');
-Route::post('/admin/addcategory', [CategoryController::class, 'addcategory'])->name('admin.postcategory');
-Route::delete('/admin/{category}/delete', [CategoryController::class, 'destroy'])->name('admin.deletecategory');
-
-//category editview and update
-Route::get('/admin/editview/{id}',[CategoryController::class,'edit'])->name('admin.category.viewupdate');
-Route::post('/admin/editview/{id}',[CategoryController::class,'updatecategory'])->name('admin.category.update');
+Route::middleware(['admin'])->group(function () {
+    //admin
+    Route::get('/admin/dashboard',[DashboardController::class,'index'])->name('admin.dashboard');
+    Route::get('/admin/customerlist', [UserController::class, 'view'])->name('admin.customerlist');
+    Route::get('/user/{id}',[UserController::class,'edit'])->name('admin.user.customerEdit');
+    Route::post('/user/{id}',[UserController::class,'update'])->name('admin.user.customerUpdate');
+    Route::delete('user/{user}/delete', [UserController::class, 'destroy'])->name('users.destroy');
+    Route::post('/admin/register',[UserController::class,'adminsRegister'])->name('admins.register');
+    Route::get('/admin/register',[UserController::class,'adminRegister'])->name('admin.register');
 
 
+    //admin category
+    Route::get('/admin/category_list',[CategoryController::class,'view'])->name('admin.categorylist');
+    Route::get('/admin/addcategory',[CategoryController::class,'viewCategory'])->name('admin.viewcategory');
+    Route::post('/admin/addcategory', [CategoryController::class, 'addcategory'])->name('admin.postcategory');
+    Route::delete('/admin/{category}/delete', [CategoryController::class, 'destroy'])->name('admin.deletecategory');
 
-//admin product
-Route::get('/admin/addproduct',[ProductController::class,'index'])->name('admin.addproduct');
-Route::post('/admin/addproduct',[ProductController::class,'addProduct'])->name('admin.product.addproduct');
+    //category editview and update
+    Route::get('/admin/editview/{id}',[CategoryController::class,'edit'])->name('admin.category.viewupdate');
+    Route::post('/admin/editview/{id}',[CategoryController::class,'updatecategory'])->name('admin.category.update');
+
+
+
+    //admin product
+    Route::get('/admin/addproduct',[ProductController::class,'index'])->name('admin.addproduct');
+    Route::post('/admin/addproduct',[ProductController::class,'addProduct'])->name('admin.product.addproduct');
+});
