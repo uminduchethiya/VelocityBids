@@ -18,5 +18,8 @@ class HomeContrller extends Controller
         $vehicles = Vehicle::where('action', 'Available')->latest()->paginate(12);
         return view('user.allVehicle', compact('vehicles'));
     }
+    public function shop(){
+        return view('user.shop');
+    }
 
 }

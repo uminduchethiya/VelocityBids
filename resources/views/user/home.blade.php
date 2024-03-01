@@ -28,7 +28,7 @@
 
 <body>
     @include('components.nav-bar')
-
+<div class="container">
     <!-- Slider main container -->
     <div class="z-0 w-full h-screen swiper">
 
@@ -251,8 +251,7 @@
                                             <span>{{ $vehicle->Make }}|</span>
                                             <span>{{ $vehicle->mileage }}</span>
                                 </p>
-                                <a href="#"
-                                    class="inline-flex items-center py-2 text-sm font-medium text-center text-red-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <a href="{{ route('bidding', ['id' => $vehicle->id]) }}" class="inline-flex items-center py-2 text-sm font-medium text-center text-red-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     AWAITING BID
                                 </a>
                             </div>
@@ -479,9 +478,10 @@
                 }
 
 
+
                 @media only screen and (min-width: 1366px) and (max-width: 1512px) {
                     .test {
-                        width: 340px;
+                        width: 300px;
                         /* Adjust the width as needed */
                     }
 
@@ -515,7 +515,7 @@
                 }
             </style>
             @include('components.footer')
-
+        </div>
 </body>
 
 </html>
