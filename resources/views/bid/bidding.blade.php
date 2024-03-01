@@ -59,6 +59,7 @@
             <div class="grid justify-between grid-cols-2 col-span-3 gap-4 mt-4 text-xl">
                 <!-- Additional vehicle information -->
                 <div>
+                    <p><strong>User Name:</strong> {{ $user->f_name }}</p>
                     <p><strong>Vehicle Type:</strong> {{ $vehicle->vehicle_type }}</p>
                     <p><strong>Fuel Type:</strong> {{ $vehicle->fuel_type }}</p>
                     <p><strong>Mileage:</strong> {{ $vehicle->mileage }}</p>
@@ -66,13 +67,23 @@
                     <p><strong>Feature Description:</strong> {{ $vehicle->feadescription }}</p>
                 </div>
                 <div>
+                    <p><strong>Bid Max Price:</strong> {{ $maxPrice}}</p>
                     <p><strong>Model:</strong> {{ $vehicle->Model }}</p>
                     <p><strong>Make:</strong> {{ $vehicle->Make }}</p>
                     <p><strong>Registration Number:</strong> {{ $vehicle->regnumber }}</p>
                     <p><strong>Location:</strong> {{ $vehicle->Location }}</p>
                     <p><strong>Condition Description:</strong> {{ $vehicle->condescription }}</p>
                 </div>
+                <form action="{{ route('bid.store') }}" method="post">
+                    @csrf
+                    <input type="text" name="user" id="" value="{{$user->id}}" hidden>
+                    <input type="text" name="vehicle" id="" value="{{$vehicle->id}}" hidden>
+                    <label for="bid"><strong>Bid Amount:</strong></label>
+                    <input type="number" name="bid" id="bid" required>
+                    <button type="submit" class="h-10 px-4 font-extrabold text-white rounded-lg w-28 md:w-28 bg-buttonorange hover:bg-orange-700">Submit</button>
+                </form>
             </div>
+
 
         </div>
 

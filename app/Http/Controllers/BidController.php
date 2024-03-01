@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bid;
+use App\Models\User;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
@@ -17,7 +20,7 @@ class BidController extends Controller
 // bidadd user
     public function addBidInfo(Request $request)
     {
-
+        $userId = Auth::id();
         $request->validate(
             [
                 'vehicle_name' => 'required',
@@ -47,6 +50,7 @@ class BidController extends Controller
 
 
         $vehicle = new Vehicle();
+        $vehicle->user_id=$userId ;
         $vehicle->vehicle_type = $request->input('vehicle_type');
         $vehicle->fuel_type = $request->input('fuel_type');
         $vehicle->mileage = $request->input('mileage');
@@ -140,21 +144,64 @@ class BidController extends Controller
 
     }
 
-public function bidding(Request $request, $id)
-{
-    // Find the vehicle based on the $id
-    $vehicle = Vehicle::find($id);
+    public function bidding(Request $request, $id)
+    {
+        // Find the vehicle based on the $id
+        $vehicle = Vehicle::find($id);
+        $user_id = $vehicle->user_id;
 
-    // Check if the vehicle was found
-    if (!$vehicle) {
-        // Handle the case where the vehicle is not found
-        abort(404, 'Vehicle not found');
+        $vehicleId = $id;
+
+        // Find bids with the specified vehicle_id
+        $bidsForVehicle = Bid::where('vehicle_id', $vehicleId)->get();
+
+        if ($bidsForVehicle->count() > 0) {
+            // Assuming you want to iterate through each bid in the collection
+            foreach ($bidsForVehicle as $bid) {
+                // Retrieve the max price for the bid
+                $maxPrice = $bidsForVehicle->max('price');
+
+                // Use $bid as needed within the loop
+                // dd($bid);
+
+                // Other logic related to $bid...
+            }
+
+            // If you need the maximum price outside the loop, you can use $maxPrice here
+            // dd('Max Price: ' . $maxPrice);
+        }else {
+            // Handle the case where the bid with the given ID is not found
+            $maxPrice=0;
+        }
+        // Find the user by ID
+        $user = User::find($user_id);
+        // Check if the vehicle was found
+        if (!$vehicle) {
+            // Handle the case where the vehicle is not found
+            abort(404, 'Vehicle not found');
+        }
+
+        // Now you can use $vehicle in your view or perform additional logic
+
+        return view('bid.bidding', compact('vehicle','user','maxPrice'));
     }
+    public function store(Request $request)
+        {
+            $request->validate([
+                'user' => 'required|exists:users,id',
+                'vehicle' => 'required|exists:vehicles,id',
+                'bid' => 'required|numeric',
+            ]);
 
-    // Now you can use $vehicle in your view or perform additional logic
+            // Create a new bid
+            Bid::create([
+                'user_id' => $request->input('user'),
+                'vehicle_id' => $request->input('vehicle'),
+                'price' => $request->input('bid'),
+            ]);
 
-    return view('bid.bidding', compact('vehicle'));
-}
+            return redirect()->back()->with('success', 'Bid submitted successfully!');
+        }
 
 }
 
