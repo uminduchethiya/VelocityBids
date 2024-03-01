@@ -1,8 +1,10 @@
 <?php
 
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BidController;
 use App\Http\Controllers\HomeContrller;
@@ -31,6 +33,7 @@ Route::post('/contact', [UserController::class, 'submitForm'])->name('contact.su
 Route::get('/about', [UserController::class, 'about'])->name('user.about');
 Route::get('/login',[AuthController::class,'login_index'])->name('login_index');
 Route::get('/home',[HomeContrller::class,'index'])->name('home');
+Route::get('/shop',[HomeContrller::class,'shop'])->name('shop');
 Route::get('/getallvehicle',[HomeContrller::class,'viewAllVehicle'])->name('getallvehicle');
 Route::get('/vehicle/{id}',[BidController::class,'vehicleIndex'])->name('vehicle_Index');
 
@@ -85,3 +88,19 @@ Route::get('/user/{id}',[UserController::class,'edit'])->name('admin.user.custom
 Route::post('/user/{id}',[UserController::class,'update'])->name('admin.user.customerUpdate');
 Route::delete('user/{user}/delete', [UserController::class, 'destroy'])->name('users.destroy');
 
+
+//admin category
+Route::get('/admin/category_list',[CategoryController::class,'view'])->name('admin.categorylist');
+Route::get('/admin/addcategory',[CategoryController::class,'viewCategory'])->name('admin.viewcategory');
+Route::post('/admin/addcategory', [CategoryController::class, 'addcategory'])->name('admin.postcategory');
+Route::delete('/admin/{category}/delete', [CategoryController::class, 'destroy'])->name('admin.deletecategory');
+
+//category editview and update
+Route::get('/admin/editview/{id}',[CategoryController::class,'edit'])->name('admin.category.viewupdate');
+Route::post('/admin/editview/{id}',[CategoryController::class,'updatecategory'])->name('admin.category.update');
+
+
+
+//admin product
+Route::get('/admin/addproduct',[ProductController::class,'index'])->name('admin.addproduct');
+Route::post('/admin/addproduct',[ProductController::class,'addProduct'])->name('admin.product.addproduct');
