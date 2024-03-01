@@ -48,6 +48,7 @@ Route::post('/resetpassword',[AuthController::class,'resetpasswordPost'])->name(
 // Bid Controller
 Route::middleware(['auth'])->group(function () {
     Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
+    Route::post('/bid/store', [BidController::class, 'store'])->name('bid.store');
 });
 Route::post('/bid/add-bid',[BidController::class,'addBidInfo'])->name('bid.addBidInfo');
 Route::get('/bidding/{id}', [BidController::class, 'bidding'])->name('bidding');
