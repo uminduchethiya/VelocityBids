@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Vehicle;
+use App\Models\Category;
+use App\Models\Product;
+use Illuminate\Http\Request;
+
 class HomeContrller extends Controller
 {
     public function index()
@@ -19,7 +22,18 @@ class HomeContrller extends Controller
         return view('user.allVehicle', compact('vehicles'));
     }
     public function shop(){
-        return view('user.shop');
+        $categories = Product::all();
+        return view('user.shop',compact('categories'));
+    }
+    public function Searchshop(Request $request){
+        $searchTerm = $request->input('search');
+
+        $categories = Product::where('product_name', 'like', '%' . $searchTerm . '%')
+        ->orWhereHas('category', function ($query) use ($searchTerm) {
+            $query->where('category_name', 'like', '%' . $searchTerm . '%');
+        })
+        ->get();
+        return view('user.shop',compact('categories'));
     }
 
 }
