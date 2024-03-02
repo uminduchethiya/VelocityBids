@@ -30,7 +30,7 @@
     @include('components.nav-bar')
 <div class="container">
     <!-- Slider main container -->
-    <div class="z-0 w-full h-screen swiper">
+    <div class="z-0 w-full swiper">
 
         {{-- mobile home --}}
 
@@ -55,7 +55,7 @@
                 </div>
 
             </div>
-            <div class="h-screen  md:hidden">
+            <div class="h-screen md:hidden">
                 <img src="{{ asset('img/mobilehome3.jpg') }}" class="absolute w-full mt-24 h-3/5 lg"
                     alt="Flowbite Logo" />
                 <div class="  mt-[500px]  mx-5 justify-center ">

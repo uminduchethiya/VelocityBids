@@ -1,12 +1,13 @@
 <!-- resources/views/header.blade.php -->
 
-<header class=' absolute z-50 flex items-center w-full bg-white header md:mb-4'>
+<header class='absolute z-50 flex items-center w-full bg-white header md:mb-4'>
     <div class="container font-boogaloo">
         <div class="flex items-center justify-between">
             <!-- Logo -->
-            <a href="{{route('home')}}"  class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="{{route('home')}}" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="{{ asset('img/logo.png') }}" class="h-16 " alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-transparent hidden md:block">VelocityBids</span>
+                <span
+                    class="self-center hidden text-2xl font-semibold whitespace-nowrap dark:text-transparent md:block">VelocityBids</span>
             </a>
             <!-- menu -->
             <!-- resources/views/your-view.blade.php -->
@@ -17,8 +18,7 @@
                         <a href="{{route('home')}}" class="text-black hover:text-orange-600">Home</a>
                     </li>
                     <li x-data="{ open: false }" @click.away="open = false" class="relative group">
-                        <a
-                            @click="open = !open" href="{{route('getallvehicle')}}"
+                        <a @click="open = !open" href="{{route('getallvehicle')}}"
                             class="flex items-center text-black hover:text-orange-600">
                             All Vehicle
                             {{-- <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -32,15 +32,19 @@
                         {{-- <ul x-show="open" @click.away="open = false"
                             class="absolute left-0 mt-2 space-y-2 text-black transition-opacity duration-300 ease-in-out bg-white"
                             role="menu">
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Car</a>
-                            </li>
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Van</a>
+                            <li role="menuitem"><a href="#"
+                                    class="block px-4 py-2 hover:text-orange-600 hover:bg-gray-100">Car</a>
                             </li>
                             <li role="menuitem"><a href="#"
-                                    class="block px-4 py-2 hover:text-orange-600">Motorcycle</a></li>
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Bus</a>
+                                    class="block px-4 py-2 hover:text-orange-600 hover:bg-gray-100">Van</a>
                             </li>
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Boat</a>
+                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600">Motorcycle</a>
+                            </li>
+                            <li role="menuitem"><a href="#"
+                                    class="block px-4 py-2 hover:text-orange-600 hover:bg-gray-100">Bus</a>
+                            </li>
+                            <li role="menuitem"><a href="#"
+                                    class="block px-4 py-2 hover:text-orange-600 hover:bg-gray-100">Boat</a>
                             </li>
                         </ul> --}}
                     </li>
@@ -59,9 +63,11 @@
                         {{-- <ul x-show="open" @click.away="open = false"
                             class="absolute left-0 mt-2 space-y-2 text-black transition-opacity duration-300 ease-in-out bg-white"
                             role="menu">
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">abcd</a>
+                            <li role="menuitem"><a href="#"
+                                    class="block px-4 py-2 hover:text-orange-600 hover:bg-gray-100">abcd</a>
                             </li>
-                            <li role="menuitem"><a href="#" class="block px-4 py-2 hover:text-orange-600  hover:bg-gray-100">Part</a>
+                            <li role="menuitem"><a href="#"
+                                    class="block px-4 py-2 hover:text-orange-600 hover:bg-gray-100">Part</a>
                             </li>
                         </ul> --}}
                     </li>
@@ -82,7 +88,7 @@
     <div class="flex items-center h-20 gap-4 px-5">
         <div class="md:block">
             <button type="button"
-                class="w-28 md:w-28 h-10 px-4 text-white bg-buttonorange hover:bg-orange-700 rounded-lg font-extrabold">
+                class="h-10 px-4 font-extrabold text-white rounded-lg w-28 md:w-28 bg-buttonorange hover:bg-orange-700">
                 <a href="{{ route('bid.add-bid') }}">Bid now!</a>
             </button>
         </div>
@@ -97,7 +103,7 @@
                 </div>
             </a>
 
-            <div class="relative  text-left flex ">
+            <div class="relative flex text-left ">
                 <a href="#" class="pl-4 text-gray-800 hover:text-orange-600" id="dropdown-menu">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -109,11 +115,26 @@
                 </a>
 
                 <!-- Dropdown Content -->
-                <div class="hidden origin-top-right absolute right-0 mt-8 md:w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" id="dropdown-content">
+                <div class="absolute right-0 hidden mt-8 origin-top-right bg-white rounded-md shadow-lg md:w-48 ring-1 ring-black ring-opacity-5"
+                    id="dropdown-content">
                     <div class="py-1 text-balance">
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Name</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Edit</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Bid</a>
+                        @if (auth()->check())
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">
+                            {{ auth()->user()->f_name }} {{ auth()->user()->l_name }}
+                        </a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Edit</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Bid</a>
+                            <a href="{{ route('logout') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Log Out</a>
+
+                        @else
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">
+                            Anonymous User
+                        </a>
+                        <a href="{{ route('loginindex') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-orange-600">Log In</a>
+                        @endif
+
                     </div>
                 </div>
 
