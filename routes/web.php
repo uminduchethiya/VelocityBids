@@ -34,6 +34,7 @@ Route::get('/home',[HomeContrller::class,'index'])->name('home');
 Route::get('/shop',[HomeContrller::class,'shop'])->name('shop');
 Route::get('/getallvehicle',[HomeContrller::class,'viewAllVehicle'])->name('getallvehicle');
 Route::get('/vehicle/{id}',[BidController::class,'vehicleIndex'])->name('vehicle_Index');
+Route::post('/shops',[HomeContrller::class,'Searchshop'])->name('Searchshop');
 
 
 Route::get('/forgetpassword', [AuthController::class, 'forgetpassword_index'])->name('forgetpassword');
