@@ -101,7 +101,13 @@ public function login(Request $request)
     // Authentication failed
     return redirect()->back()->withErrors(['login' => 'Invalid email or password.']);
 }
+public function logout()
+    {
+        Auth::logout();
 
+        // You can redirect to a specific page after logout
+        return redirect('/');
+    }
 
     public function forgetpassword_index(){
         return view('auth.forgetpassword');

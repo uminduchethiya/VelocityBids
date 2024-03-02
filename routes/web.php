@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BidController;
 use App\Http\Controllers\HomeContrller;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Facade;
 
@@ -35,7 +36,8 @@ Route::get('/shop',[HomeContrller::class,'shop'])->name('shop');
 Route::get('/getallvehicle',[HomeContrller::class,'viewAllVehicle'])->name('getallvehicle');
 Route::get('/vehicle/{id}',[BidController::class,'vehicleIndex'])->name('vehicle_Index');
 Route::post('/shops',[HomeContrller::class,'Searchshop'])->name('Searchshop');
-
+Route::get('/log-in', [AuthController::class, 'login_index'])->name('loginindex');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/forgetpassword', [AuthController::class, 'forgetpassword_index'])->name('forgetpassword');
 Route::post('/forgetpassword', [AuthController::class, 'forgetpasswordPost'])->name('forgetpasswordPost');
@@ -43,13 +45,17 @@ Route::post('/forgetpassword', [AuthController::class, 'forgetpasswordPost'])->n
 Route::get('/resetpassword/{token}', [AuthController::class, 'resetpassword_index'])->name('resetpassword');
 Route::post('/resetpassword',[AuthController::class,'resetpasswordPost'])->name('resetpasswordPost');
 
-
+// Cart Controller
+Route::middleware(['auth'])->group(function () {
+    Route::post('/add/cart', [CartController::class, 'addCart'])->name('add.cart');
+});
 
 
 // Bid Controller
 Route::middleware(['auth'])->group(function () {
     Route::get('/bid/add-bid', [BidController::class, 'addBid'])->name('bid.add-bid');
     Route::post('/bid/store', [BidController::class, 'store'])->name('bid.store');
+
 });
 Route::post('/bid/add-bid',[BidController::class,'addBidInfo'])->name('bid.addBidInfo');
 Route::get('/bidding/{id}', [BidController::class, 'bidding'])->name('bidding');
