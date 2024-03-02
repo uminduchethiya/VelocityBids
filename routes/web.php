@@ -107,4 +107,14 @@ Route::middleware(['admin'])->group(function () {
     //admin product
     Route::get('/admin/addproduct',[ProductController::class,'index'])->name('admin.addproduct');
     Route::post('/admin/addproduct',[ProductController::class,'addProduct'])->name('admin.product.addproduct');
+
+
+    //addmin product view
+    Route::get('/admin/productlist',[ProductController::class,'view'])->name('admin.product.productlist');
+
+    //admin product edit
+    Route::get('/admin/editproduct/{id}',[ProductController::class,'editProduct'])->name('admin.product.productedit');
+    Route::post('/admin/editproduct/{id}',[ProductController::class,'updateProduct'])->name('admin.product.productupdate');
+    Route::delete('/admin/deleteproduct/{product}', [ProductController::class, 'deleteproduct'])->name('admin.product.productdelete');
+
 });
