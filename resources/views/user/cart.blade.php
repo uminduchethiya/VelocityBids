@@ -20,12 +20,12 @@
     @include('components.nav-bar')
     <div class="container">
         <div>
-            <div class="mt-8 font-boogaloo md:mt-4 w-3/4">
+            <div class="w-3/4 mt-8 font-boogaloo md:mt-4">
                 <div class="overflow-x-auto">
                     <table class=" mt-[200px]">
                         <thead class="text-white bg-black">
                             <th class="px-20 py-2 rounded-bl-3xl rounded-tl-3xl">Product</th>
-                            <th class=" py-2  ">Product Name</th>
+                            <th class="py-2 ">Product Name</th>
                             <th class="px-20 py-2">Price</th>
                             <th class="px-20 py-2">Quntity</th>
                             <th class="px-10 py-2">Total</th>
@@ -36,14 +36,14 @@
                             <!-- Replace this part with your frontend logic or static data -->
                             <!-- Sample data for demonstration purposes -->
                             <tr class="text-center text-black border-b tableRow">
-                                <td class="px-10 py-2 text-primaryColor"><u>abc</u></td>
-                                <td class="py-2">123</td>
+                                <td class="px-10 py-2 text-primaryColor"><u>{{$Product->product_name}}</u></td>
+                                <td class="py-2">{{$Product->price}}</td>
 
                                 <td class="py-2">$100</td>
                                 <td class="px-10 py-2">
                                     <div>
                                         <div
-                                        class="flex items-center justify-center w-24 h-8 border rounded-full md:w-20 md:mt-0 bg-red-800">
+                                        class="flex items-center justify-center w-24 h-8 bg-red-800 border rounded-full md:w-20 md:mt-0">
                                         <button
                                             class="flex items-center justify-center w-6 h-6 px-2 ml-1 text-white border rounded-full bg-dark-red cart_update"
                                             onclick="decreaseQuantity(this)">
@@ -52,7 +52,7 @@
                                         <span class="justify-center w-6 ml-1 text-center text-black"
                                             id="quantity">1</span>
                                         <button
-                                            class="flex items-center justify-center w-6 h-6 px-2 ml-1 text-white border rounded-full bg-red-800 cart_update"
+                                            class="flex items-center justify-center w-6 h-6 px-2 ml-1 text-white bg-red-800 border rounded-full cart_update"
                                             onclick="increaseQuantity(this)">
                                             +
                                         </button>
@@ -60,8 +60,8 @@
                                     </div>
                                 </td>
                                 <td class="py-2">$100</td>
-                                <td class="py-2 hidden">useerid</td>
-                                <td class="py-2 hidden">productid</td>
+                                <td class="hidden py-2">useerid</td>
+                                <td class="hidden py-2">productid</td>
 
                                 <td class="px-8 py-2">
                                     <div class="flex md:flex-row md:gap-4">
@@ -101,7 +101,7 @@
                 </div>
                 <form action="/session" method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <button class="w-full px-4 py-2 mt-4 text-white rounded-lg bg-red-900">Proceed To Checkout</button>
+                    <button class="w-full px-4 py-2 mt-4 text-white bg-red-900 rounded-lg">Proceed To Checkout</button>
                 </form>
             </div>
         </div>
