@@ -54,7 +54,7 @@
                                     <form action="{{ route('add.cart') }}" method="POST">
                                         @csrf
 
-                                        <input type="text" class=" border" value="{{ $category->id }}" name="cid"
+                                        <input type="text" class="border " value="{{ $category->id }}" name="cid"
                                             hidden>
 
                                         <button
