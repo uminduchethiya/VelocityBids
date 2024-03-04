@@ -5,9 +5,7 @@
             <div class=" flex">
                 <div class="md:w-1/2">
                     <h1 class="text-[40px] font-anton text-primaryColor">Customer <span class="text-black">List</span></h1>
-                    <p class="text-gray-600 font-boogaloo">Where our irresistible pizza offers are waiting to elevate your
-                        dining
-                        experience</p>
+                   
                 </div>
 
                 <div class="md:w-1/2 flex justify-end">

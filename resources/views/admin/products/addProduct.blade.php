@@ -13,8 +13,7 @@
 
                 <span class="text-black">Product</span>
             </h1>
-            <p class="text-gray-600 font-boogaloo">Where our irresistible pizza offers are waiting to elevate your dining
-                experience</p>
+         
             {{-- @if (Session::has('success'))
                 <div class="block w-full p-4 mb-4 text-base leading-5 text-white bg-green-300 rounded-lg opacity-100 arelative font-regular"
                     role="alert">
@@ -76,35 +75,35 @@
 
                         <div class="flex flex-wrap -mx-2">
                             <div class="w-full md:w-1/3 px-2 mb-2">
-                                <label for="image1">Vehicle Front Image:</label>
+                                <label for="image1">Product Front Image:</label>
                                 <input type="file" accept="image/*" name="image1" id="image1"
                                     class="mb-2  border border-black rounded-md" onchange="previewImage(this, 'preview1')">
                                 <img id="preview1" class="image-preview border border-black rounded-md mt-2">
                             </div>
 
                             <div class="w-full md:w-1/3 px-2 mb-2">
-                                <label for="image2">Vehicle Back Image:</label>
+                                <label for="image2">Product Back Image:</label>
                                 <input type="file" accept="image/*" name="image2" id="image2"
                                     class="mb-2  border border-black rounded-md" onchange="previewImage(this, 'preview2')">
                                 <img id="preview2" class="image-preview mt-2 border border-black rounded-md">
                             </div>
 
                             <div class="w-full md:w-1/3 px-2 mb-2">
-                                <label for="image3">Vehicle Left Side Image:</label>
+                                <label for="image3">Product Left Side Image:</label>
                                 <input type="file" accept="image/*" name="image3" id="image3"
                                     class="mb-2  border border-black rounded-md" onchange="previewImage(this, 'preview3')">
                                 <img id="preview3" class="image-preview mt-2 border border-black rounded-md">
                             </div>
 
                             <div class="w-full md:w-1/3 px-2 mb-2">
-                                <label for="image4">Vehicle Right Side Image:</label>
+                                <label for="image4">Product Right Side Image:</label>
                                 <input type="file" accept="image/*" name="image4" id="image4"
                                     class="mb-2  border border-black rounded-md" onchange="previewImage(this, 'preview4')">
                                 <img id="preview4" class="image-preview mt-2 border border-black rounded-md">
                             </div>
 
                             <div class="w-full md:w-1/3 px-2 mb-2">
-                                <label for="image5">Vehicle Inside Image:</label>
+                                <label for="image5">Product Inside Image:</label>
                                 <input type="file" accept="image/*" name="image5" id="image5"
                                     class="mb-2  border  border-black rounded-md"
                                     onchange="previewImage(this, 'preview5')">

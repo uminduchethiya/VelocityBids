@@ -150,4 +150,8 @@ class ProductController extends Controller
         return redirect('/admin/productlist')->with('success', 'Vehicle and associated details deleted successfully');
 
     }
+
+    // public function cart(){
+    //     return view('user.cart');
+    // }
 }

@@ -13,8 +13,7 @@
 
                 <span class="text-black">Product</span>
             </h1>
-            <p class="text-gray-600 font-boogaloo">Where our irresistible pizza offers are waiting to elevate your dining
-                experience</p>
+           
             {{-- @if (Session::has('success'))
                 <div class="block w-full p-4 mb-4 text-base leading-5 text-white bg-green-300 rounded-lg opacity-100 arelative font-regular"
                     role="alert">

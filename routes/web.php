@@ -39,6 +39,10 @@ Route::post('/shops',[HomeContrller::class,'Searchshop'])->name('Searchshop');
 Route::get('/log-in', [AuthController::class, 'login_index'])->name('loginindex');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
+
+//cart
+// Route::get('/cart',[ProductController::class,'cart'])->name('user.cart');
+
 Route::get('/forgetpassword', [AuthController::class, 'forgetpassword_index'])->name('forgetpassword');
 Route::post('/forgetpassword', [AuthController::class, 'forgetpasswordPost'])->name('forgetpasswordPost');
 
@@ -47,7 +51,12 @@ Route::post('/resetpassword',[AuthController::class,'resetpasswordPost'])->name(
 
 // Cart Controller
 Route::middleware(['auth'])->group(function () {
-    Route::post('/add/cart', [CartController::class, 'addCart'])->name('add.cart');
+    Route::get('/add/cart', [CartController::class, 'addCart'])->name('add.cart');
+    Route::get('/cheackout', [CartController::class, 'cheackout'])->name('item.cheackout');
+    Route::get('/payment', [CartController::class, 'payment'])->name('item.payment');
+
+
+
 });
 
 
