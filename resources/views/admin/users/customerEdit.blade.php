@@ -5,8 +5,7 @@
     <div class="container">
         <div class="mx-10 md:mt-40">
             <h1 class="text-[40px] font-anton text-primaryColor">Customer <span class="text-black">Edit</span></h1>
-            <p class="text-gray-600 font-boogaloo">Where our irresistible pizza offers are waiting to elevate your dining
-                experience</p>
+           
             <form action="{{route('admin.user.customerUpdate',$user->id)}}" method="post" class="flex flex-col  mx-auto md:mt-8 font-boogaloo text-[20px] mt-4">
                 @method('post')
                 @csrf

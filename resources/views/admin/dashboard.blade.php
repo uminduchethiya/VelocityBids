@@ -9,8 +9,7 @@
                     <h1 class="text-[40px] font-anton text-primaryColor md:mt-4">Welcome <span
                             class="text-black">Umindu</span></h1>
                     <div class="">
-                        <h3 class="text-lg text-gray-600 font-boogaloo">Where our irresistible pizza offers are waiting to
-                            elevate your dining experience</h3>
+                        
                     </div>
 
 

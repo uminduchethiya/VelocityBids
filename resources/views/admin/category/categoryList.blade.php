@@ -3,8 +3,8 @@
     <div class="container">
         <div class="grid justify-center md:mt-36">
             <h1 class="text-[40px] font-anton text-primaryColor md:mt-4">Category <span class="text-black">List</span></h1>
-            <p class="text-gray-600 font-boogaloo">Where our irresistible pizza offers are waiting to elevate your dining
-                experience</p>
+            {{-- <p class="text-gray-600 font-boogaloo">Where our irresistible pizza offers are waiting to elevate your dining
+                experience</p> --}}
             <div class="mt-8 font-boogaloo md:mt-4">
                 <div class="overflow-x-auto">
                     <table class="w-full border-collapse px-10">
