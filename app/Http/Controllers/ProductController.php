@@ -56,6 +56,10 @@ class ProductController extends Controller
         $image4Path = $request->file('image4')->store('public/img');
         $image5Path = $request->file('image5')->store('public/img');
 
+        $price = $request->input('price');
+        $sellingPrice = $request->input('selling_price');
+        $discountPercentage = number_format(($price - $sellingPrice) / $price * 100, 1);
+
         $product = new Product();
         $product->product_name = $request->input('product_name');
         $product->category_id = $request->input('category_id');
@@ -68,6 +72,7 @@ class ProductController extends Controller
         $product->image3 = $image3Path;
         $product->image4 = $image4Path;
         $product->image5 = $image5Path;
+        $product->discount_percentage = $discountPercentage;
         // dd($product);
 
 
@@ -97,35 +102,39 @@ class ProductController extends Controller
     //update product
 
     public function updateProduct(Request $request, $id)
-    {
-        $product = Product::find($id);
-        if (!$product) {
-            abort(404);
-        }
-        $product->product_name = $request->input('product_name');
-        $product->category_id = $request->input('category_id');
-        $product->price = $request->input('price');
-        $product->selling_price = $request->input('selling_price');
-        $product->short_des = $request->input('short_des');
-        $product->description = $request->input('description');
-
-        $imageFields = ['image1', 'image2', 'image3', 'image4', 'image5'];
-        foreach ($imageFields as $fieldName) {
-            if ($request->hasFile($fieldName)) {
-                // Store the new image and update the path
-                $imagePath = $request->file($fieldName)->store('public/img');
-                // Delete old image if exists
-                if ($product->$fieldName && Storage::exists($product->$fieldName)) {
-                    Storage::delete($product->$fieldName);
-                }
-                $product->$fieldName = $imagePath;
-            }
-        }
-        $product->update();
-
-        return redirect()->back()->with('success', 'Vehicle details updated successfully');
-
+{
+    $product = Product::find($id);
+    if (!$product) {
+        abort(404);
     }
+    $product->product_name = $request->input('product_name');
+    $product->category_id = $request->input('category_id');
+    $product->price = $request->input('price');
+    $product->selling_price = $request->input('selling_price');
+    $product->short_des = $request->input('short_des');
+    $product->description = $request->input('description');
+    $price = $request->input('price');
+    $sellingPrice = $request->input('selling_price');
+    $discountPercentage = number_format(($price - $sellingPrice) / $price * 100, 1);
+    $product->discount_percentage = $discountPercentage; // Update the discount percentage
+
+    $imageFields = ['image1', 'image2', 'image3', 'image4', 'image5'];
+    foreach ($imageFields as $fieldName) {
+        if ($request->hasFile($fieldName)) {
+            // Store the new image and update the path
+            $imagePath = $request->file($fieldName)->store('public/img');
+            // Delete old image if exists
+            if ($product->$fieldName && Storage::exists($product->$fieldName)) {
+                Storage::delete($product->$fieldName);
+            }
+            $product->$fieldName = $imagePath;
+        }
+    }
+    $product->update();
+
+    return redirect()->back()->with('success', 'Vehicle details updated successfully');
+}
+
 
     //delete product
     public function deleteproduct(Request $request,Product $product) {

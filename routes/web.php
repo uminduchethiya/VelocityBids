@@ -51,15 +51,14 @@ Route::post('/resetpassword',[AuthController::class,'resetpasswordPost'])->name(
 
 // Cart Controller
 Route::middleware(['auth'])->group(function () {
-    Route::get('/add/cart', [CartController::class, 'addCart'])->name('add.cart');
-    Route::post('/add/cart', [CartController::class, 'addCart'])->name('add.cart');
     Route::get('/cheackout', [CartController::class, 'cheackout'])->name('item.cheackout');
     Route::get('/payment', [CartController::class, 'payment'])->name('item.payment');
-
-
+    Route::get('/add/cart', [CartController::class, 'addCart'])->name('add.cart');
+    Route::post('/view/cart', [CartController::class, 'viewCart'])->name('view.cart');
+    Route::get('/view/cart', [CartController::class, 'viewCart'])->name('view.cart');
+    Route::post('/add/cart', [CartController::class, 'addCart'])->name('add.cart');
 
 });
-
 
 // Bid Controller
 Route::middleware(['auth'])->group(function () {
