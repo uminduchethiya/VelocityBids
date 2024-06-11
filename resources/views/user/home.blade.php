@@ -98,7 +98,7 @@
                 el: '.swiper-scrollbar',
             },
             autoplay: {
-            delay: 3000, // Change the delay to your preferred time in milliseconds (e.g., 3000 for 3 seconds)
+            delay: 3000, // Change the delay tfffo your preferred time in milliseconds (e.g., 3000 for 3 seconds)
             disableOnInteraction: false, // Set to false if you want the autoplay to continue even when the user interacts with the swiper
         },
 
