@@ -115,6 +115,37 @@
         <div class="swiper-scrollbar"></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            speed: 200,
+            spaceBetween: 100,
+
+            // If we need pagination
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            autoplay: {
+            delay: 3000, // Change the delay tfffo your preferred time in milliseconds (e.g., 3000 for 3 seconds)
+            disableOnInteraction: false, // Set to false if you want the autoplay to continue even when the user interacts with the swiper
+        },
+
+        });
+    </script>
+@include('components.footer')
+
 
 
     {{-- Search bar Section --}}
